@@ -39,10 +39,6 @@ startup
             break;
     }
 
-    // TODO: Move to the settings files.
-    settings.Add("Buri stronghold", false, "Buri stronghold split", "Locations");
-    settings.SetToolTip("Buri stronghold", "Splits when you leave Buri stronghold and dock at tyr's temple");
-
     vars.completedsplits = new List<string>{};
     vars.ValksDead = new List<string>{};
     vars.ObjComplete = new List<int>{};
