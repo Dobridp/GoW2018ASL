@@ -45,6 +45,14 @@ startup
     vars.Buri = 0;
 }
 
+update
+{
+    if (old.Obj != current.Obj)
+    {
+        print(objTransition);
+    }
+}
+
 onStart
 {
     if (settings["100% NG+"])
