@@ -173,7 +173,7 @@ split
         string objTransition = old.Obj + "," + current.Obj;
         if (settings.ContainsKey(objTransition) && settings[objTransition])
             {
-            vars.CompletedSplits.Add(objTransition);
+            vars.completedsplits.Add(objTransition);
             return true;
             }
         }
