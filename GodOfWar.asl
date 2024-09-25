@@ -43,6 +43,7 @@ startup
     vars.ValksDead = new List<string>{};
     vars.ObjComplete = new List<int>{};
     vars.Buri = 0;
+    string objTransition = old.Obj
 }
 
 update
