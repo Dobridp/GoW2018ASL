@@ -68,7 +68,7 @@ startup
 
 update
 {
-    if (Settings["Odin Ravens tracker"])
+    if (settings["Odin Ravens tracker"])
     {
         // Check if the ORL pointer is null
         if (current.ORL != null)
@@ -152,7 +152,7 @@ onStart
         };
     }
 
-    if (Settings["Trials%"])
+    if (settings["Trials%"])
     {
         vars.TrialsComplete = new List<string>{
             "Trial I Normal",
@@ -182,7 +182,7 @@ start
     {
         return true;
     }
-    if (Settings["All Ravens"] && Current.ORL == 1 && old.ORL == 0)
+    if (settings["All Ravens"] && current.ORL == 1 && old.ORL == 0)
     {
         return true;
     }
@@ -191,24 +191,24 @@ start
 split
 {
      //splits for trials% ng and ng+
-    if (Settings["Trials%"])
+    if (settings["Trials%"])
     {
-        if (Current.SmolderingEmber > old.SmolderingEmber)
+        if (current.SmolderingEmber > old.SmolderingEmber)
         {
             return true;
         }
     }
 
     //splits for all ravens%
-    if (Settings["Normal"])
+    if (settings["Normal"])
     {
-        if (Current.ORL > old.ORL)
+        if (current.ORL > old.ORL)
         {
             return true;
         }
-    } else if (Settings["51"])
+    } else if (settings["51"])
     {
-        if (Current.ORL == 51 && old.ORL != 51 )
+        if (current.ORL == 51 && old.ORL != 51 )
         {
             return true;
         }
@@ -427,9 +427,9 @@ onSplit
     }
 
     //put here sense the final split is a manual split so...
-    if (Settings["Trials%"])
+    if (settings["Trials%"])
     {
-        if (Current.SmolderingEmber > old.SmolderingEmber)
+        if (current.SmolderingEmber > old.SmolderingEmber)
         {
             vars.completedsplits.Add(vars.TrialsComplete[0]);  
             vars.TrialsComplete.RemoveAt(0);
