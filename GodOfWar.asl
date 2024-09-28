@@ -6,9 +6,9 @@ state("GoW")
     int Load : 0x22E9DB0; //0 not loading; 257/256 loading
     int Shop : 0x2448448; //0 out of the shop; 2 in the shop
     int SkapSlag : 0x0142C400, 0x0, 0x28, 0x20, 0x0, 0x40, 0x17B0; //tracks current Skap Slag
-    string5 MRT : 0x01580010, 0x2A8, 0x0; //Tracks the number of odin ravens destroyed in midgard
     int ORL : 0x01425F90, 0x9AC0; //Tracks the number for the labor of odins ravens
     int MainMenu : 0x22E9DB4; //1 When in the main menu an when selecting the difficulty and 0 when your not in either of those situations
+    int SmolderingEmber: 0x0142CC60, 0x0, 0x10, 0x918, 0x1D8, 0xE70; //tracks current smoldering ember
 
     //address for all the helmets of the Valks a lot easier than having the obj number
     int GunnrHelmet : 0x014261C0, 0x230; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
@@ -42,7 +42,46 @@ startup
     vars.completedsplits = new List<string>{};
     vars.ValksDead = new List<string>{};
     vars.ObjComplete = new List<int>{};
+    vars.TrialsComplete = new List<string>{};
     vars.Buri = 0;
+
+     // Set text component function to display pointer value as a fraction
+    Action<string, string> SetTextComponent = (id, text) => {
+        var textSettings = timer.Layout.Components.Where(x => x.GetType().Name == "TextComponent").Select(x => x.GetType().GetProperty("Settings").GetValue(x, null));
+        var textSetting = textSettings.FirstOrDefault(x => (x.GetType().GetProperty("Text1").GetValue(x, null) as string) == id);
+        if (textSetting == null)
+        {
+            var textComponentAssembly = Assembly.LoadFrom("Components\\LiveSplit.Text.dll");
+            var textComponent = Activator.CreateInstance(textComponentAssembly.GetType("LiveSplit.UI.Components.TextComponent"), timer);
+            timer.Layout.LayoutComponents.Add(new LiveSplit.UI.Components.LayoutComponent("LiveSplit.Text.dll", textComponent as LiveSplit.UI.Components.IComponent));
+
+            textSetting = textComponent.GetType().GetProperty("Settings", BindingFlags.Instance | BindingFlags.Public).GetValue(textComponent, null);
+            textSetting.GetType().GetProperty("Text1").SetValue(textSetting, id);
+        }
+
+        if (textSetting != null)
+            textSetting.GetType().GetProperty("Text2").SetValue(textSetting, text);
+    };
+    vars.SetTextComponent = SetTextComponent;
+
+}
+
+update
+{
+    if (Settings["Odin Ravens tracker"])
+    {
+        // Check if the ORL pointer is null
+        if (current.ORL != null)
+        {
+            // Display ORL value as value/51, including when it's 0
+            vars.SetTextComponent("Odins Ravens Destroyed", current.ORL + "/51");
+        }
+        else
+        {
+            // Do not display anything if ORL is null (i.e., no "N/A")
+            vars.SetTextComponent("Pointer invalid open game. If you open the game an you still see this then contact TpRedNinja in the speedrun discord for gow");
+        }
+    }
 }
 
 onStart
@@ -112,6 +151,23 @@ onStart
             "Realm Tear XIV"
         };
     }
+
+    if (Settings["Trials%"])
+    {
+        vars.TrialsComplete = new List<string>{
+            "Trial I Normal",
+            "Trial I Hard",
+            "Trial II Normal",
+            "Trial II Hard",
+            "Trial III Normal",
+            "Trial III Hard",
+            "Trial IV Normal",
+            "Trial IV Hard",
+            "Trial V Normal",
+            "Trial V Hard",
+            "Göndul"
+        };
+    }
 }
 
 start
@@ -126,10 +182,39 @@ start
     {
         return true;
     }
+    if (Settings["All Ravens"] && Current.ORL == 1 && old.ORL == 0)
+    {
+        return true;
+    }
 }
 
 split
 {
+     //splits for trials% ng and ng+
+    if (Settings["Trials%"])
+    {
+        if (Current.SmolderingEmber > old.SmolderingEmber)
+        {
+            return true;
+        }
+    }
+
+    //splits for all ravens%
+    if (Settings["Normal"])
+    {
+        if (Current.ORL > old.ORL)
+        {
+            return true;
+        }
+    } else if (Settings["51"])
+    {
+        if (Current.ORL == 51 && old.ORL != 51 )
+        {
+            return true;
+        }
+    }
+
+    //valk splits for valk%
     if (settings["Split for Valkyrie%"])
     {
         if (current.GunnrHelmet == 1 && old.GunnrHelmet == -1 && !vars.ValksDead.Contains("Gunnr")){
@@ -166,11 +251,13 @@ split
         }
     }
 
+    //splits for ng and ng+ runs
     if (settings["Splits for Main Game"])
     {
         if (old.Obj != current.Obj) // Split on Obj address changing
         {
         string objTransition = old.Obj + "," + current.Obj;
+        print("Obj Transition: " + objTransition);
         if (settings.ContainsKey(objTransition) && settings[objTransition])
             {
             vars.completedsplits.Add(objTransition);
@@ -179,6 +266,7 @@ split
         }
     }
 
+    //splits for 100% ng+
     //makes sure it doesnt split when placing the valk helmets also splits when skap slag increases by 5,9, or 18
     if (settings["Side Stuff"] && current.SkapSlag == old.SkapSlag + 9 && (current.GunnrHelmet == 0 || current.KaraHelmet == 0 || current.GeirdrifulHelmet == 0 || current.EirHelmet == 0 || current.RòtaHelmet == 0 || current.OlrunHelmet == 0 || current.GöndulHelmet == 0 || current.HildrHelmet == 0))
     {
@@ -235,7 +323,7 @@ split
     {
         vars.completedsplits.Add("Buri's Storeroom");
         return true;
-    } else if(settings["Buri stronghold"] && current.SaveDescript == "Midgard - Shores of Nine - Return to Týr’s Vault" && old.SaveDescript == "Midgard - Buri’s Storeroom - Return to Týr’s Vault" && vars.Buri == 0)
+    } else if(settings["Buri stronghold"] && current.SaveDescript == "Midgard - Shores of Nine - Return to Týr’s Vault" && old.SaveDescript == "Midgard - Buri’s Storeroom - Return to Týr’s Vault" && vars.Buri < 2)
     {
         vars.Buri ++;
         return false;
@@ -322,16 +410,33 @@ split
         vars.completedsplits.Add("Finish");
         return true;
     }
+
 }
 
 onSplit
 {
+    //in case someone does a undo split an in general its better to be here
     if (settings["Side Stuff"])
     {
-        vars.completedsplits.Add(vars.Hundo[0]);
-        vars.Hundo.RemoveAt(0);
+        if (current.SkapSlag == old.SkapSlag + 5 || current.SkapSlag == old.SkapSlag + 9 || current.SkapSlag == old.SkapSlag + 18)
+        {
+            vars.completedsplits.Add(vars.Hundo[0]);  
+            vars.Hundo.RemoveAt(0);
+        }
+       
     }
 
+    //put here sense the final split is a manual split so...
+    if (Settings["Trials%"])
+    {
+        if (Current.SmolderingEmber > old.SmolderingEmber)
+        {
+            vars.completedsplits.Add(vars.TrialsComplete[0]);  
+            vars.TrialsComplete.RemoveAt(0);
+        }
+    }
+
+    
 }
 
 
@@ -347,6 +452,7 @@ onReset
     vars.ValksDead.Clear();
     vars.ObjComplete.Clear();
     vars.Hundo.Clear();
+    vars.TrialsComplete.Clear();
 }
 
 //so i dont have to make this if statment over an over again
@@ -355,3 +461,4 @@ onReset
         vars.completed.Add(0, "");
         return true;
     }*/
+    
