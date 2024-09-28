@@ -130,11 +130,11 @@
 	</Setting>
 
 	<Setting Id="All Ravens" Label="All Ravens" ToolTip="Options for when you want to split when destroying ravens and to autostart" State="false">
-		<Setting Id="Normal" Label="Every single Raven" ToolTip="Splits whenever you destroy 1 raven" State="false">
-		<Setting Id="51" Label="Last Raven" ToolTip="Splits Only when the last Raven is killed" State="false">
+		<Setting Id="Normal" Label="Every single Raven" ToolTip="Splits whenever you destroy 1 raven" State="false"/>
+		<Setting Id="51" Label="Last Raven" ToolTip="Splits Only when the last Raven is killed" State="false"/>
 	</Setting>
-	
+
 	<Setting Id="Miscellaneous" Label="Miscellaneous" ToolTip="Miscellaneous settings that doesnt have anything to do with the speedrun check below for option" State="false">
-		<Setting Id="Odin Ravens tracker" Label="Odin Ravens tracker" ToolTip="Shows how many ravens you have destroyed" State="false">
+		<Setting Id="Odin Ravens tracker" Label="Odin Ravens tracker" ToolTip="Shows how many ravens you have destroyed" State="false"/>
 	</Setting>
 </Settings>
