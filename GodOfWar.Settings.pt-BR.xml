@@ -1,5 +1,6 @@
 <Settings>
 	<Setting Id="Split for Valkyrie%" Label="Splits para Valkyrie%" ToolTip="Splita quando você obtém um capacete de valquiria" State="false"/>
+	<Setting Id="Trials%" Label="Splits para Trials%" ToolTip="Splits para Trials% and impossible trials% after every trial note does not timer does not end on pickup of valk helemt or touching the 6th sword" State="false"/>
 
 	<Setting Id="Splits for Main Game" Label="Splits para o Jogo Principal" ToolTip="Splita toda vez que você completar um objetivo da história" State="false">
 		<Setting Id="0,674" Label="Caçe com Atreus" ToolTip="Splita quando o objetivo muda para caçe com Atreus" State="false"/>
@@ -125,7 +126,16 @@
 		<Setting Id="Side Stuff" Label="Side Stuff" ToolTip="Splits whenever you gain 5, 9, or 18 skap slag such as certain obj, realm tears completion, completing labors/artifact sets, and unlocking a new realm" State="false"/>
 		<Setting Id="Locations" Label="Locations" ToolTip="Splits when you leave Stone falls after first visit and second visit, isle of death, iron cove,foothills going valk area , after atreus kills modi, final climb up the peak 2nd time" State="false">
 			<Setting Id="Buri stronghold" Label="Buri stronghold" ToolTip="Splits when you leave Buri stronghold and dock at tyr's temple" State="false"/>
-    		</Setting>
+    	</Setting>
+	</Setting>
+
+	<Setting Id="All Ravens" Label="All Ravens" ToolTip="Options for when you want to split when destroying ravens and to autostart" State="false">
+		<Setting Id="Normal" Label="Every single Raven" ToolTip="Splits whenever you destroy 1 raven" State="false"/>
+		<Setting Id="51" Label="Last Raven" ToolTip="Splits Only when the last Raven is killed" State="false"/>
+	</Setting>
+
+	<Setting Id="Miscellaneous" Label="Miscellaneous" ToolTip="Miscellaneous settings that doesnt have anything to do with the speedrun check below for option" State="false">
+		<Setting Id="Odin Ravens tracker" Label="Odin Ravens tracker" ToolTip="Shows how many ravens you have destroyed" State="false"/>
 	</Setting>
 </Settings>
 
