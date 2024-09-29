@@ -6,7 +6,7 @@ state("GoW")
     int Load : 0x22E9DB0; //0 not loading; 257/256 loading
     int Shop : 0x2448448; //0 out of the shop; 2 in the shop
     int SkapSlag : 0x0142C400, 0x0, 0x28, 0x20, 0x0, 0x40, 0x17B0; //tracks current Skap Slag
-    int ORL : 0x01425F90, 0x9AC0; //Tracks the number for the labor of odins ravens
+    int ORL : 0x026D4778, 0x9AC0; //Tracks the number for the labor of odins ravens
     int MainMenu : 0x22E9DB4; //1 When in the main menu an when selecting the difficulty and 0 when your not in either of those situations
     int SmolderingEmber: 0x0142CC60, 0x0, 0x10, 0x918, 0x1D8, 0xE70; //tracks current smoldering ember
 
