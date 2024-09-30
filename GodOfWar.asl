@@ -1,24 +1,24 @@
 state("GoW")
 {
     string100 SaveDescript : 0x22C67E0; //Location + objective in string
-    int16 Obj : 0x22C6904; //Objective in int; Null objective = 0
-    int16 Load : 0x22E9DB0; //0 not loading; 257/256 loading
-    int16 Shop : 0x2448448; //0 out of the shop; 2 in the shop
-    int16 SkapSlag : 0x0142C400, 0x0, 0x28, 0x20, 0x0, 0x40, 0x17B0; //tracks current Skap Slag
-    int16 ORL : 0x026D4778, 0x9AC0; //Tracks the number for the labor of odins ravens
-    int16 MainMenu : 0x22E9DB4; //1 When in the main menu an when selecting the difficulty and 0 when your not in either of those situations
-    int16 SmolderingEmber: 0x0142CC60, 0x0, 0x10, 0x918, 0x1D8, 0xE70; //tracks current smoldering ember
+    int Obj : 0x22C6904; //Objective in int; Null objective = 0
+    int Load : 0x22E9DB0; //0 not loading; 257/256 loading
+    int Shop : 0x2448448; //0 out of the shop; 2 in the shop
+    int SkapSlag : 0x0142C400, 0x0, 0x28, 0x20, 0x0, 0x40, 0x17B0; //tracks current Skap Slag
+    int ORL : 0x026D4778, 0x9AC0; //Tracks the number for the labor of odins ravens
+    int MainMenu : 0x22E9DB4; //1 When in the main menu an when selecting the difficulty and 0 when your not in either of those situations
+    int SmolderingEmber: 0x0142CC60, 0x0, 0x10, 0x918, 0x1D8, 0xE70; //tracks current smoldering ember
 
     //address for all the helmets of the Valks a lot easier than having the obj number
-    int16 GunnrHelmet : 0x014261C0, 0x230; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int16 GöndulHelmet : 0x014261C0, 0x270; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int16 GeirdrifulHelmet : 0x014261C0, 0x2B0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int16 KaraHelmet : 0x014261C0, 0x2F0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int16 RòtaHelmet : 0x014261C0, 0x330; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int16 EirHelmet : 0x014261C0, 0x370; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int16 HildrHelmet : 0x014261C0, 0x3B0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int16 OlrunHelmet : 0x014261C0, 0x3F0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int16 SigrunHelmet : 0x014261C0, 0x430; // -1 when u dont have the helmet 1 when u do
+    int GunnrHelmet : 0x014261C0, 0x230; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
+    int GöndulHelmet : 0x014261C0, 0x270; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
+    int GeirdrifulHelmet : 0x014261C0, 0x2B0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
+    int KaraHelmet : 0x014261C0, 0x2F0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
+    int RòtaHelmet : 0x014261C0, 0x330; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
+    int EirHelmet : 0x014261C0, 0x370; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
+    int HildrHelmet : 0x014261C0, 0x3B0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
+    int OlrunHelmet : 0x014261C0, 0x3F0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
+    int SigrunHelmet : 0x014261C0, 0x430; // -1 when u dont have the helmet 1 when u do
 }
 
 startup
