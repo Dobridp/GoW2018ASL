@@ -132,7 +132,7 @@
 
 	<Setting Id="All Ravens" Label="Splits para All Ravens" ToolTip="Splits para categoria de todos os corvos" State="false">
 		<Setting Id="Normal" Label="Em cada corvo" ToolTip="Splita quando mata 1 corvo" State="false"/>
-		<Setting Id="51" Label="=Último Corvo" ToolTip="Splita apenas quando o último corvo é destruido" State="false"/>
+		<Setting Id="51" Label="Último Corvo" ToolTip="Splita apenas quando o último corvo é destruido" State="false"/>
 	</Setting>
 
 	<Setting Id="Miscellaneous" Label="Misc" ToolTip="Opções aleatórias que não afetam a speedrun" State="false">
