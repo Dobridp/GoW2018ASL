@@ -1,5 +1,6 @@
 state("GoW")
 {
+    //orginal address
     string100 SaveDescript : 0x22C67E0; //Location + objective in string
     int Obj : 0x22C6904; //Objective in int; Null objective = 0
     int Load : 0x22E9DB0; //0 not loading; 257/256 loading
@@ -7,7 +8,11 @@ state("GoW")
     int SkapSlag : 0x0142C400, 0x0, 0x28, 0x20, 0x0, 0x40, 0x17B0; //tracks current Skap Slag
     int ORL : 0x026D4778, 0x9AC0; //Tracks the number for the labor of odins ravens
     int MainMenu : 0x22E9DB4; //1 When in the main menu an when selecting the difficulty and 0 when your not in either of those situations
-    int SmolderingEmber: 0x0142CC60, 0x0, 0x10, 0x918, 0x1D8, 0xE70; //tracks current smoldering ember
+    int SmolderingEmber : 0x0142CDC0, 0x0, 0x40, 0x5D8, 0x1D8, 0xE70; //tracks current smoldering ember
+    int stunned : 0x2D460C0; // 0 for when a enemy isint stunned 1 for when they are. Used for sigrun vh% and alfheim%
+    int sword : 0x2C31DE0; //0 for when kratos is not interacting with the sword 31 when he is. Used for trials
+    int combat : 0x22E77F0; //0 when not in combat and 1 for in combat. Used for trials
+    float DarkElfKingHealth : 0x02C34138, 0x388; //tracks the EnemyHealth useful for alfheim% primiarly used for the dark elf king at the end of alfheim
 
     //address for all the helmets of the Valks a lot easier than having the obj number
     int GunnrHelmet : 0x014261C0, 0x230; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
@@ -19,12 +24,12 @@ state("GoW")
     int HildrHelmet : 0x014261C0, 0x3B0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
     int OlrunHelmet : 0x014261C0, 0x3F0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
     int SigrunHelmet : 0x014261C0, 0x430; // -1 when u dont have the helmet 1 when u do
+    float ValkHealth : 0x02CDBBA8, 0x388; // Same as DarkElfKingHealth but this actually tracks the valkyries health. Useful for Sigrun vh%
 }
 
 startup
 {
     Assembly.Load(File.ReadAllBytes("Components/asl-help")).CreateInstance("Basic");
-
     var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
     vars.Log(culture);
 
@@ -82,6 +87,7 @@ update
             vars.SetTextComponent("Pointer invalid open game. If you open the game an you still see this then contact TpRedNinja in the speedrun discord for gow");
         }
     }
+   
 }
 
 onStart
@@ -152,7 +158,7 @@ onStart
         };
     }
 
-    if (settings["Trials%"])
+    if (settings["Trials Reg%"])
     {
         vars.TrialsComplete = new List<string>{
             "Trial I Normal",
@@ -167,22 +173,32 @@ onStart
             "Trial V Hard",
             "Göndul"
         };
+    }else if (settings["Trials impossible%"])
+    {
+        vars.TrialsComplete = new List<string>{
+            "Trial I Impossible",
+            "Trial II Impossible",
+            "Trial III Impossible",
+            "Trial IV Impossible",
+            "Trial V Impossible",
+            "Sword"
+        };
     }
 }
 
 start
 {
-    if (settings["Splits for Main Game"] && current.MainMenu == 0 && old.MainMenu == 1 && current.Load == 0){
+    if ((settings["Splits for Main Game"] || settings["100% NG+"] ) && current.MainMenu == 0 && old.MainMenu == 1 && current.Load == 0){
         return true;
     }
     if (settings["Split for Valkyrie%"] && old.Shop > current.Shop){
         return true;
     }
-    if (settings["100% NG+"] && current.MainMenu == 0 && old.MainMenu == 1 && current.Load == 0)
+    if (settings["All Ravens"] && current.ORL == 1 && old.ORL == 0)
     {
         return true;
     }
-    if (settings["All Ravens"] && current.ORL == 1 && old.ORL == 0)
+    if ((settings["Trials Reg%"] || settings["Trials impossible%"]) && current.sword == 0 && old.sword == 31 && current.combat == 1)
     {
         return true;
     }
@@ -190,10 +206,28 @@ start
 
 split
 {
+    //split for ending of alfheim%
+    if (settings["Alfheim%"] && current.stunned == 0 && old.stunned == 1 && current.DarkElfKingHealth == 1) //final split
+    {
+        return true;
+    }
+
      //splits for trials% ng and ng+
-    if (settings["Trials%"])
+    if (settings["Trials Reg%"])
     {
         if (current.SmolderingEmber > old.SmolderingEmber)
+        {
+            return true;
+        } else if (current.combat == 0 && old.combat == 1 && vars.completedsplits.Contains("Trial V Hard"));
+        {
+            return true;
+        }
+    } else if (settings["Trials impossible%"])
+    {
+        if (current.SmolderingEmber > old.SmolderingEmber)
+        {
+            return true;
+        } else if (current.sword == 31 && old.sword == 0 && vars.completedsplits.Contains("Trial V Impossible"))
         {
             return true;
         }
@@ -426,17 +460,32 @@ onSplit
        
     }
 
-    //put here sense the final split is a manual split so...
-    if (settings["Trials%"])
+    //add the stuff here b/c gotta make use out of the block 
+    if (settings["Trials Reg%"])
     {
         if (current.SmolderingEmber > old.SmolderingEmber)
         {
             vars.completedsplits.Add(vars.TrialsComplete[0]);  
             vars.TrialsComplete.RemoveAt(0);
         }
+        if (current.combat == 0 && old.combat == 1 && vars.completedsplits.Contains("Trial V Hard"))
+        {
+            vars.completedsplits.Add(vars.TrialsComplete[0]);  
+            vars.TrialsComplete.RemoveAt(0);
+        }
+    } else if (settings["Trials impossible%"])
+    {
+        if (current.SmolderingEmber > old.SmolderingEmber)
+        {
+            vars.completedsplits.Add(vars.TrialsComplete[0]);  
+            vars.TrialsComplete.RemoveAt(0);
+        }
+        if (current.combat == 0 && old.combat == 1 && vars.completedsplits.Contains("Trial V Impossible"))
+        {
+            vars.completedsplits.Add(vars.TrialsComplete[0]);  
+            vars.TrialsComplete.RemoveAt(0);
+        }
     }
-
-    
 }
 
 
@@ -451,8 +500,8 @@ onReset
     vars.completedsplits.Clear();
     vars.ValksDead.Clear();
     vars.ObjComplete.Clear();
-    vars.TrialsComplete.Clear();
     vars.Hundo.Clear();
+    vars.TrialsComplete.Clear();
 }
 
 //so i dont have to make this if statment over an over again
