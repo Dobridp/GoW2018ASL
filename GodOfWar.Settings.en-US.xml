@@ -1,7 +1,4 @@
 <Settings>
-	<Setting Id="Split for Valkyrie%" Label="Split for Valkyrie%" ToolTip="Splits whenever you gain one of the Valkyrie's helmets" State="false"/>
-	<Setting Id="Trials%" Label="Trials%" ToolTip="Splits for Trials% and impossible trials% after every trial note does not timer does not end on pickup of valk helemt or touching the 6th sword" State="false"/>
-
 	<Setting Id= "Splits for Main Game" Label="Splits for Main Game" ToolTip="Splits everytime you complete a story task" State="false">
 		<Setting Id="0,674" Label="hunt with Atreus" ToolTip="Splits when the obj changes to hunt with Atreus" State="false"/>
 		<Setting Id="674,4620" Label="defeat dauoi kaupmaor" ToolTip="Splits when the obj changes to defeat dauoi kaupmaor" State="false"/>
@@ -39,6 +36,7 @@
 		<Setting Id="728,730" Label="find a way out of the temple" ToolTip="Splits when the obj changes to find a way out of the temple" State="false"/>
 		<Setting Id="730,732" Label="return to boat" ToolTip="Splits when the obj changes to return to boat" State="false"/>
 		<Setting Id="732,3701" Label="use the sand bowl lift" ToolTip="Splits when the obj changes to use the sand bowl lift" State="false"/>
+		<Setting Id="Alfheim%" Label="Alfheim%" ToolTip="Splits after your press the finisher button on the dark elf king" State="false"/>
 		<Setting Id="3701,734" Label="return to tyr's temple" ToolTip="Splits when the obj changes to return to tyr's temple" State="false"/>
 		<Setting Id="734,736" Label="realm travel back to Midgard" ToolTip="Splits when the obj changes to realm travel back to Midgard" State="false"/>
 		<Setting Id="736,40077" Label="return to the mountain" ToolTip="Splits when the obj changes to return to the mountain" State="false"/>
@@ -129,12 +127,14 @@
     	</Setting>
 	</Setting>
 
-	<Setting Id="All Ravens" Label="All Ravens" ToolTip="Options for when you want to split when destroying ravens and to autostart" State="false">
-		<Setting Id="Normal" Label="Every single Raven" ToolTip="Splits whenever you destroy 1 raven" State="false"/>
-		<Setting Id="51" Label="Last Raven" ToolTip="Splits Only when the last Raven is killed" State="false"/>
-	</Setting>
-
-	<Setting Id="Miscellaneous" Label="Miscellaneous" ToolTip="Miscellaneous settings that doesnt have anything to do with the speedrun check below for option" State="false">
-		<Setting Id="Odin Ravens tracker" Label="Odin Ravens tracker" ToolTip="Shows how many ravens you have destroyed" State="false"/>
+	<Setting Id="Miscellaneous" Label="Miscellaneous" ToolTip="Miscellaneous catergories that arent longer than 1hr 30mins" State="false">
+		<Setting Id="Split for Valkyrie%" Label="Split for Valkyrie%" ToolTip="Splits whenever you gain one of the Valkyrie's helmets" State="false"/>
+		<Setting Id="Trials Reg%" Label="Regular" ToolTip="Splits for Trials% after every trial ends. With autstart and auto end" State="false"/>
+		<Setting Id="Trials impossible%" Label="Impossible" ToolTip="Splits for impossible trials% after every trial ends. With autstart and auto end" State="false"/>
+		<Setting Id="All Ravens" Label="All Ravens" ToolTip="Options for when you want to split when destroying ravens and to autostart" State="false">
+			<Setting Id="Normal" Label="Every single Raven" ToolTip="Splits whenever you destroy 1 raven" State="false"/>
+			<Setting Id="51" Label="Last Raven" ToolTip="Splits Only when the last Raven is killed" State="false"/>
+			<Setting Id="Odin Ravens tracker" Label="Odin Ravens tracker" ToolTip="Shows how many ravens you have destroyed" State="false"/>
+		</Setting>
 	</Setting>
 </Settings>
