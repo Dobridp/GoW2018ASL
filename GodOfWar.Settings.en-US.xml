@@ -124,7 +124,7 @@
 		<Setting Id="Side Stuff" Label="Side Stuff" ToolTip="Splits whenever you gain 5, 9, or 18 skap slag such as certain obj, realm tears completion, completing labors/artifact sets, and unlocking a new realm" State="false"/>
 		<Setting Id="Locations" Label="Locations" ToolTip="Splits when you leave Stone falls after first visit and second visit, isle of death, iron cove,foothills going valk area , after atreus kills modi, final climb up the peak 2nd time" State="false">
 			<Setting Id="Buri stronghold" Label="Buri stronghold" ToolTip="Splits when you leave Buri stronghold and dock at tyr's temple" State="false"/>
-    	</Setting>
+	    	</Setting>
 	</Setting>
 
 	<Setting Id="Miscellaneous" Label="Miscellaneous" ToolTip="Miscellaneous catergories that arent longer than 1hr 30mins" State="false">
