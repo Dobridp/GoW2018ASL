@@ -36,6 +36,7 @@
 		<Setting Id="728,730" Label="Encontre uma saída do templo" ToolTip="Splita quando o objetivo muda para encontre uma saída do templo" State="false"/>
 		<Setting Id="730,732" Label="Retorne ao barco" ToolTip="Splita quando o objetivo muda para retorne ao barco" State="false"/>
 		<Setting Id="732,3701" Label="Use o elevador de areia" ToolTip="Splita quando o objetivo muda para use o elevador de areia" State="false"/>
+		<Setting Id="Alfheim%" Label="Alfheim%" ToolTip="Splits after your press the finisher button on the dark elf king" State="false"/>
 		<Setting Id="3701,734" Label="Retorne ao templo de Tyr" ToolTip="Splita quando o objetivo muda para retorne ao templo de Tyr" State="false"/>
 		<Setting Id="734,736" Label="Viaje pelo reino de volta para Midgard" ToolTip="Splita quando o objetivo muda para viaje pelo reino de volta para Midgard" State="false"/>
 		<Setting Id="736,40077" Label="Retorne à montanha" ToolTip="Splita quando o objetivo muda para retorne à montanha" State="false"/>
@@ -126,17 +127,15 @@
     		</Setting>
 	</Setting>
 
-	<Setting Id="Split for Valkyrie%" Label="Splits para Valkyrie%" ToolTip="Splita quando você obtém um capacete de valquiria" State="false"/>
-	
-	<Setting Id="Trials%" Label="Splits para Trials%" ToolTip="Splita para Trials% e Impossible Trials% depois de todo desafio" State="false"/>
-
-	<Setting Id="All Ravens" Label="Splits para All Ravens" ToolTip="Splits para categoria de todos os corvos" State="false">
-		<Setting Id="Normal" Label="Em cada corvo" ToolTip="Splita quando mata 1 corvo" State="false"/>
-		<Setting Id="51" Label="Último Corvo" ToolTip="Splita apenas quando o último corvo é destruido" State="false"/>
-	</Setting>
-
-	<Setting Id="Miscellaneous" Label="Misc" ToolTip="Opções aleatórias que não afetam a speedrun" State="false">
-		<Setting Id="Odin Ravens tracker" Label="Contador de Corvos de Odin" ToolTip="Mostra quantos corvos já foram destruidos" State="false"/>
+	<Setting Id="Miscellaneous" Label="Misc" ToolTip="Miscellaneous catergories that arent longer than 1hr 30mins" State="false">
+		<Setting Id="Split for Valkyrie%" Label="Splits para Valkyrie%" ToolTip="Splita quando você obtém um capacete de valquiria" State="false"/>
+		<Setting Id="Trials Reg%" Label="Regular" ToolTip="Splits for Trials% after every trial ends. With autstart and auto end" State="false"/>
+		<Setting Id="Trials impossible%" Label="Impossible" ToolTip="Splits for impossible trials% after every trial ends. With autstart and auto end" State="false"/>
+		<Setting Id="All Ravens" Label="Splits para All Ravens" ToolTip="Splits para categoria de todos os corvos" State="false">
+			<Setting Id="Normal" Label="Em cada corvo" ToolTip="Splita quando mata 1 corvo" State="false"/>
+			<Setting Id="51" Label="Último Corvo" ToolTip="Splita apenas quando o último corvo é destruido" State="false"/>
+			<Setting Id="Odin Ravens tracker" Label="Contador de Corvos de Odin" ToolTip="Mostra quantos corvos já foram destruidos" State="false"/>
+		</Setting>
 	</Setting>
 </Settings>
 
