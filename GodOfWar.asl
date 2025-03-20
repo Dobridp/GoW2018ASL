@@ -207,7 +207,7 @@ start
 split
 {
     //split for ending of alfheim%
-    if (settings["Alfheim%"] && current.stunned == 0 && old.stunned == 1 && current.DarkElfKingHealth == 1) //final split
+    if (settings["Alfheim%"] && current.stunned == 0 && old.stunned == 1 && current.DarkElfKingHealth == 1 && current.Obj == 3701) //final split for alfheim %
     {
         return true;
     }
