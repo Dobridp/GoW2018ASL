@@ -53,7 +53,6 @@ startup
     vars.TrialsComplete = new List<string>{};
     vars.Hundo = new List<string>{};
     vars.Buri = 0;
-    vars.oldobj = null;
 
      // Set text component function to display pointer value as a fraction
     Action<string, string> SetTextComponent = (id, text) => {
@@ -106,11 +105,6 @@ update
             // Do not display anything if Hacksilver is null (i.e., no "N/A")
             vars.SetTextComponent("Pointer invalid open game. If you open the game an you still see this then contact TpRedNinja in the speedrun discord for gow");
         }
-    }
-
-    if (current.Obj == 0 && old.Obj != 0)
-    {
-        vars.oldobj = old.Obj;
     }
 }
 
@@ -250,12 +244,12 @@ split
     {
         if (old.Obj != current.Obj) // Split on Obj address changing
         {
-        string objTransition = vars.oldobj + "," + current.Obj;
+        string objTransition = old.Obj + "," + current.Obj;
         print("Obj Transition: " + objTransition);
         if (settings.ContainsKey(objTransition) && settings[objTransition])
             {
-            vars.completedsplits.Add(objTransition);
-            return true;
+                vars.completedsplits.Add(objTransition);
+                return true;
             }
         }
     }
