@@ -1,28 +1,32 @@
 state("GoW")
 {
-    //orginal address
+    //original address
     string100 SaveDescript : 0x22C67E0; //Location + objective in string
     int Obj : 0x22C6904; //Objective in int; Null objective = 0
     int Load : 0x22E9DB0; //0 not loading; 257/256 loading
     int Shop : 0x2448448; //0 out of the shop; 2 in the shop
-    int SkapSlag : 0x0142C400, 0x0, 0x28, 0x20, 0x0, 0x40, 0x17B0; //tracks current Skap Slag
-    int ORL : 0x026D4778, 0x9AC0; //Tracks the number for the labor of odins ravens
     int MainMenu : 0x22E9DB4; //1 When in the main menu an when selecting the difficulty and 0 when your not in either of those situations
-    int SmolderingEmber : 0x0142CDC0, 0x0, 0x40, 0x5D8, 0x1D8, 0xE70; //tracks current smoldering ember
-    int stunned : 0x2D460C0; // 0 for when a enemy isint stunned 1 for when they are. Used for sigrun vh% and alfheim%
+    int stunned : 0x2D460C0; // 0 for when a enemy isn't stunned 1 for when they are. Used for sigrun vh% and alfheim%
     int sword : 0x2C31DE0; //0 for when kratos is not interacting with the sword 31 when he is. Used for trials
     int combat : 0x22E77F0; //0 when not in combat and 1 for in combat. Used for trials
-    float DarkElfKingHealth : 0x02C34138, 0x388; //tracks the EnemyHealth useful for alfheim% primiarly used for the dark elf king at the end of alfheim
+
+    // Resources, Health, and other stuff
+    int SkapSlag : 0x0142C400, 0x0, 0x40, 0x17B0; //tracks current Skap Slag
+    int SmolderingEmber : 0x014262C0, 0x70, 0xE70; //tracks current smoldering ember
+    int Hacksilver: 0x014261C0, 0x1F0; //tracks current hacksilver
+    int DragonTear: 0x014261C0, 0x4AB0; //tracks current dragon tears
+    int ORL : 0x026D4778, 0x9AC0; //Tracks the number for the labor of odin's ravens
+    float DarkElfKingHealth : 0x02C34138, 0x388; //tracks the EnemyHealth useful for alfheim% primarily used for the dark elf king at the end of alfheim
 
     //address for all the helmets of the Valks a lot easier than having the obj number
-    int GunnrHelmet : 0x014261C0, 0x230; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int GöndulHelmet : 0x014261C0, 0x270; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int GeirdrifulHelmet : 0x014261C0, 0x2B0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int KaraHelmet : 0x014261C0, 0x2F0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int RòtaHelmet : 0x014261C0, 0x330; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int EirHelmet : 0x014261C0, 0x370; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int HildrHelmet : 0x014261C0, 0x3B0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
-    int OlrunHelmet : 0x014261C0, 0x3F0; //-1 when u dont have the helmet 1 when u do then 0 if u plcae it on the council of the valks
+    int GunnrHelmet : 0x014261C0, 0x230; //-1 when u dont have the helmet 1 when u do then 0 if u place it on the council of the valks
+    int GöndulHelmet : 0x014261C0, 0x270; //-1 when u dont have the helmet 1 when u do then 0 if u place it on the council of the valks
+    int GeirdrifulHelmet : 0x014261C0, 0x2B0; //-1 when u dont have the helmet 1 when u do then 0 if u place it on the council of the valks
+    int KaraHelmet : 0x014261C0, 0x2F0; //-1 when u dont have the helmet 1 when u do then 0 if u place it on the council of the valks
+    int RòtaHelmet : 0x014261C0, 0x330; //-1 when u dont have the helmet 1 when u do then 0 if u place it on the council of the valks
+    int EirHelmet : 0x014261C0, 0x370; //-1 when u dont have the helmet 1 when u do then 0 if u place it on the council of the valks
+    int HildurHelmet : 0x014261C0, 0x3B0; //-1 when u dont have the helmet 1 when u do then 0 if u place it on the council of the valks
+    int OlrunHelmet : 0x014261C0, 0x3F0; //-1 when u dont have the helmet 1 when u do then 0 if u place it on the council of the valks
     int SigrunHelmet : 0x014261C0, 0x430; // -1 when u dont have the helmet 1 when u do
     float ValkHealth : 0x02CDBBA8, 0x388; // Same as DarkElfKingHealth but this actually tracks the valkyries health. Useful for Sigrun vh%
 }
@@ -79,11 +83,26 @@ update
         if (current.ORL != null)
         {
             // Display ORL value as value/51, including when it's 0
-            vars.SetTextComponent("Odins Ravens Destroyed", current.ORL + "/51");
+            vars.SetTextComponent("Odin's Ravens Destroyed", current.ORL + "/51");
         }
         else
         {
             // Do not display anything if ORL is null (i.e., no "N/A")
+            vars.SetTextComponent("Pointer invalid open game. If you open the game an you still see this then contact TpRedNinja in the speedrun discord for gow");
+        }
+    }
+
+    if (settings["HackSilver"])
+    {
+        // Check if the Hacksilver pointer is null
+        if (current.Hacksilver != null)
+        {
+            // Display Hacksilver value as value/99999999, including when it's 0
+            vars.SetTextComponent("Hacksilver", current.Hacksilver);
+        }
+        else
+        {
+            // Do not display anything if Hacksilver is null (i.e., no "N/A")
             vars.SetTextComponent("Pointer invalid open game. If you open the game an you still see this then contact TpRedNinja in the speedrun discord for gow");
         }
     }
@@ -92,72 +111,6 @@ update
 
 onStart
 {
-    if (settings["100% NG+"])
-    {
-        vars.Hundo = new List<string>{
-            "Toys",
-            "Baldur Fight I",
-            "Foothills I",
-            "Realm Tear I",
-            "Foothills II",
-            "Mimir",
-            "Volunder Mines",
-            "Dragon I",
-            "Horns",
-            "River Pass II",
-            "Chisel",
-            "Realm Tear II",
-            "Realm Tear III",
-            "Northi Stronghold",
-            "I think I broke him",
-            "Helheim I",
-            "Masks",
-            "Landsuther Mines",
-            "Realm Tear IV",
-            "Dead Freight",
-            "Realm Tear 5",
-            "Dragon II",
-            "Anatomy of Hope",
-            "Realm Tear VI",
-            "Hammer Fall",
-            "Tyr's Vault",
-            "Cups",
-            "Realm Tear VII",
-            "Mountain 100%",
-            "Helheim Story",
-            "Heirloom",
-            "Realm Tear VIII",
-            "Spoils of War",
-            "Dragon III",
-            "Realm Tear IX",
-            "Konusgard Done",
-            "Unfinished Buisness",
-            "Ship Heads",
-            "Realm Tear X",
-            "Unity Stone",
-            "Gauntlet of the Realms",
-            "Time for Jotunheim...lol jk",
-            "Trial I Normal",
-            "Trial I Hard",
-            "Trial II Normal",
-            "Trial II Hard",
-            "Trial III Normal",
-            "Trial III Hard",
-            "Trial IV Normal",
-            "Trial IV Hard",
-            "Trial V Normal",
-            "Trial V Hard",
-            "Nifelheim",
-            "Hildr",
-            "Ivaldi's Workshop",
-            "Ivaldi's Protection",
-            "Ivaldi's Curse",
-            "Council",
-            "Realm Tears XIII",
-            "Realm Tear XIV"
-        };
-    }
-
     if (settings["Trials Reg%"])
     {
         vars.TrialsComplete = new List<string>{
@@ -188,7 +141,7 @@ onStart
 
 start
 {
-    if ((settings["Splits for Main Game"] || settings["100% NG+"] ) && current.MainMenu == 0 && old.MainMenu == 1 && current.Load == 0){
+    if ((settings["Splits for Main Game"] || settings["100% NG+"]) && current.MainMenu == 0 && old.MainMenu == 1 && current.Load == 0){
         return true;
     }
     if (settings["Split for Valkyrie%"] && old.Shop > current.Shop){
@@ -298,6 +251,15 @@ split
             vars.completedsplits.Add(objTransition);
             return true;
             }
+        }
+    }
+
+    if (settings["Dragon"])
+    {
+        if (current.DragonTear > old.DragonTear && !vars.completedsplits.Contains("Dragon");)
+        {
+            vars.completedsplits.Add("Dragon");
+            return true;
         }
     }
 
