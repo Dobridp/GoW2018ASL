@@ -1,121 +1,150 @@
 <Settings>
 	<Setting Id="Splits for Main Game" Label="Splitar para o Jogo Principal" ToolTip="Splita toda vez que você completar um objetivo da história" State="false">
-		<Setting Id="0,674" Label="Caçe com Atreus" ToolTip="Splita quando o objetivo muda para caçe com Atreus" State="false"/>
-		<Setting Id="674,4620" Label="Derrote dauoi kaupmaor" ToolTip="Splita quando o objetivo muda para derrote dauoi kaupmaor" State="false"/>
-		<Setting Id="4620,678" Label="Retorne para a casa" ToolTip="Splita quando o objetivo muda para retornar para a casa" State="false"/>
-		<Setting Id="678,5347" Label="Derrote o estranho" ToolTip="Splita quando o objetivo muda para derrote o estranho" State="false"/>
-		<Setting Id="5347,8970" Label="Viaje para a montanha" ToolTip="Splita quando o objetivo muda para viaje para a montanha" State="false"/>
-		<Setting Id="8970,680" Label="Continue em direção à montanha" ToolTip="Splita quando o objetivo muda para continue em direção à montanha" State="false"/>
-		<Setting Id="680,682" Label="Fuja das ruínas" ToolTip="Splita quando o objetivo muda para fuja das ruínas" State="false"/>
-		<Setting Id="682,20115" Label="Derrote os saqueadores" ToolTip="Splita quando o objetivo muda para derrote os saqueadores" State="false"/>
-		<Setting Id="20115,20118" Label="Fuja das ruínas" ToolTip="Splita quando o objetivo muda para fuja das ruínas" State="false"/>
-		<Setting Id="20118,20120" Label="Jogue seu machado nas árvores" ToolTip="Splita quando o objetivo muda para jogue seu machado nas árvores" State="false"/>
-		<Setting Id="20120,37223" Label="Siga através do portão para a montanha" ToolTip="Splita quando o objetivo muda para siga através do portão para a montanha" State="false"/>
-		<Setting Id="37223,20401" Label="Continue em direção a montanha" ToolTip="Splita quando o objetivo muda para continue em direção a montanha" State="false"/>
-		<Setting Id="20401,686" Label="Caçe com Atreus" ToolTip="Splita quando o objetivo muda para caçe com Atreus" State="false"/>
-		<Setting Id="686,690" Label="Siga a bruxa" ToolTip="Splita quando o objetivo muda para siga a bruxa" State="false"/>
-		<Setting Id="690,692" Label="Colete a flor de pétalas brancas" ToolTip="Splita quando o objetivo muda para colete a flor de pétalas brancas" State="false"/>
-		<Setting Id="692,698" Label="Vá para o barco" ToolTip="Splita quando o objetivo muda para vá para o barco" State="false"/>
-		<Setting Id="698,700" Label="Siga em direção à luz do dia" ToolTip="Splita quando o objetivo muda para siga em direção à luz do dia" State="false"/>
-		<Setting Id="700,26608" Label="Atraque na ponte" ToolTip="Splita quando o objetivo muda para atraque na ponte" State="false"/>
-		<Setting Id="26608,17325" Label="Investigue o templo" ToolTip="Splita quando o objetivo muda para investigue o templo" State="false"/>
-		<Setting Id="17325,26864" Label="Siga em direção a torre" ToolTip="Splita quando o objetivo muda para siga em direção a torre" State="false"/>
-		<Setting Id="26864,17496" Label="Continue em direção à montanha" ToolTip="Splita quando o objetivo muda para continue em direção à montanha" State="false"/>
-		<Setting Id="17496,702" Label="Siga a bruxa" ToolTip="Splita quando o objetivo muda para siga a bruxa" State="false"/>
-		<Setting Id="702,706" Label="Siga a bruxa 2" ToolTip="Splita quando o objetivo muda para siga a bruxa pela 2 vez" State="false"/>
-		<Setting Id="706,708" Label="Viaje para alfheim" ToolTip="Splita quando o objetivo muda para viaje para alfheim" State="false"/>
-		<Setting Id="708,21279" Label="Alfheim" ToolTip="Splita quando você chegar a alfheim" State="false"/>
-		<Setting Id="21279,712" Label="Cena atreus" ToolTip="Splita depois da cena do atreus no barco" State="false"/>
-		<Setting Id="712,718" Label="Encontre uma maneira de entrar no templo" ToolTip="Splita quando o objetivo muda para encontre uma maneira de entrar no templo" State="false"/>
-		<Setting Id="718,720" Label="Reative a ponte do templo anelada" ToolTip="Splita quando o objetivo muda para reative a ponte do templo anelada" State="false"/>
-		<Setting Id="720,722" Label="Volte para a Ponte do Templo Anelado" ToolTip="Splita quando o objetivo muda para volte para a Ponte do Templo Anelado" State="false"/>
-		<Setting Id="722,724" Label="Templo anelado" ToolTip="Splita quando você entrar no templo anelado" State="false"/>
-		<Setting Id="724,726" Label="Encontre uma maneira de entrar na colmeia" ToolTip="Splita quando o objetivo muda para encontre uma maneira de entrar na colmeia" State="false"/>
-		<Setting Id="726,39433" Label="Corredor estreito da colmeia" ToolTip="Splita quando você entrar no corredor estreito da colmeia" State="false"/>
-		<Setting Id="39433,728" Label="Destrua a colmeia e pegue a luz" ToolTip="Splita quando o objetivo muda para destrua a colmeia e pegue a luz" State="false"/>
-		<Setting Id="728,730" Label="Encontre uma saída do templo" ToolTip="Splita quando o objetivo muda para encontre uma saída do templo" State="false"/>
-		<Setting Id="730,732" Label="Retorne ao barco" ToolTip="Splita quando o objetivo muda para retorne ao barco" State="false"/>
-		<Setting Id="732,3701" Label="Use o elevador de areia" ToolTip="Splita quando o objetivo muda para use o elevador de areia" State="false"/>
-		<Setting Id="Alfheim%" Label="Alfheim%" ToolTip="Splits after your press the finisher button on the dark elf king" State="false"/>
-		<Setting Id="3701,734" Label="Retorne ao templo de Tyr" ToolTip="Splita quando o objetivo muda para retorne ao templo de Tyr" State="false"/>
-		<Setting Id="734,736" Label="Viaje pelo reino de volta para Midgard" ToolTip="Splita quando o objetivo muda para viaje pelo reino de volta para Midgard" State="false"/>
-		<Setting Id="736,40077" Label="Retorne à montanha" ToolTip="Splita quando o objetivo muda para retorne à montanha" State="false"/>
-		<Setting Id="40077,40026" Label="Dentro da torre de Vanaheim" ToolTip="Splita quando você entra na torre de Vanaheim" State="false"/>
-		<Setting Id="40026,3713" Label="Torre de Vanaheim" ToolTip="Splita quando objetivo atualizar na torre de Vanaheim" State="false"/>
-		<Setting Id="3713,3699" Label="Luz de Alfheim diz completa" ToolTip="Splita quando Luz de Alfheim estiver completa" State="false"/>
-		<Setting Id="3699,3702" Label="Atravesse as cavernas escuras" ToolTip="Splita quando o objetivo muda para atravesse as cavernas escuras" State="false"/>
-		<Setting Id="3702,3704" Label="Suba pela garra da caverna" ToolTip="Splita quando o objetivo muda para suba pelo garra da caverna" State="false"/>
-		<Setting Id="3704,17494" Label="Libere a corrente" ToolTip="Splita quando o objetivo muda para libere a corrente" State="false"/>
-		<Setting Id="17494,18017" Label="Encontre uma maneira de subir" ToolTip="Splita quando o objeto muda para encontre uma maneira de subir" State="false"/>
-		<Setting Id="18017,3706" Label="Chegue ao cume" ToolTip="Splita quando o objeto muda para chegue ao cume" State="false"/>
-		<Setting Id="3706,3719" Label="Dentro da montanha completo" ToolTip="Splita quando dentro da montanha estiver completo" State="false"/>
-		<Setting Id="3719,36974" Label="Retorne à caverna da bruxa" ToolTip="Splita quando o objetivo muda para retorne à caverna da bruxa" State="false"/>
-		<Setting Id="36974,36976" Label="Atraque na caverna da bruxa" ToolTip="Splita quando atracar na caverna da bruxa" State="false"/>
-		<Setting Id="36976,43073" Label="Retorne ao barco" ToolTip="Splita quando o objetivo muda para retorne ao barco" State="false"/>
-		<Setting Id="43073,37095" Label="Vá ao templo de Tyr" ToolTip="Splita quando o objetivo muda para vá ao templo de Tyr" State="false"/>
-		<Setting Id="37095,21412" Label="Um novo destino completo" ToolTip="Splita quando um novo destino estiver completo" State="false"/>
-		<Setting Id="21412,738" Label="Investigue o gigante morto" ToolTip="Splita quando o objetivo muda para investigue o gigante morto" State="false"/>
-		<Setting Id="738,740" Label="Recupere um pedaço do cinzel" ToolTip="Splita quando o objetivo muda para recupere um pedaço do cinzel" State="false"/>
-		<Setting Id="740,742" Label="Encontre uma maneira de quebrar o gelo" ToolTip="Splita quando o objetivo muda para encontre uma maneira de quebrar o gelo" State="false"/>
-		<Setting Id="742,25884" Label="Fale com Sindri" ToolTip="Splita quando o objetivo muda para fale com Sindri" State="false"/>
-		<Setting Id="25884,21529" Label="Encontre uma maneira de chegar ao martelo" ToolTip="Splita quando o objetivo muda para encontre uma maneira de chegar ao martelo" State="false"/>
-		<Setting Id="21529,21583" Label="Suba pelo martelo" ToolTip="Splita quando o objetivo muda para suba pelo martelo" State="false"/>
-		<Setting Id="21583,21585" Label="Solte a tira" ToolTip="Splita quando o objetivo muda para solte a tira" State="false"/>
-		<Setting Id="21585,21587" Label="Encontre uma maneira de chegar à cabeça do martelo" ToolTip="Splita quando o objetivo muda para encontre uma maneira de chegar à cabeça do martelo" State="false"/>
-		<Setting Id="21587,21591" Label="Vá até o cinzel" ToolTip="Splita quando o objetivo muda para vá até o cinzel" State="false"/>
-		<Setting Id="21591,744" Label="Recupere um pedaço do cinzel" ToolTip="Splita quando o objetivo muda para recupere um pedaço do cinzel" State="false"/>
-		<Setting Id="744,746" Label="Cinzel mágico completo" ToolTip="Splita quando o cinzel mágico estiver completo" State="false"/>
-		<Setting Id="746,9268" Label="Retorne ao lago dos nove" ToolTip="Splita quando o objetivo muda para retorne ao lago dos nove" State="false"/>
-		<Setting Id="9268,758" Label="Vá ao cofre de Tyr" ToolTip="Splita quando o objetivo muda para vá ao cofre de Tyr" State="false"/>
-		<Setting Id="758,40985" Label="Interagir com o vaso de areia" ToolTip="Splita quando precisar interagir com o vaso de areia" State="false"/>
-		<Setting Id="40985,1398" Label="Peça ajuda para Freya" ToolTip="Splita quando o objetivo muda para peça ajuda para Freya" State="false"/>
-		<Setting Id="1398,1400" Label="USar o barco de Freya para voltar para casa" ToolTip="Splita quando o objetivo muda para usar o barco de Freya para voltar para casa" State="false"/>
-		<Setting Id="1400,7800" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
-		<Setting Id="7800,1404" Label="Viaje para Helheim" ToolTip="Splita quando o objetivo muda para viaje para Helheim" State="false"/>
-		<Setting Id="1404,1406" Label="Chegue ao guardião da ponte" ToolTip="Splita quando o objetivo muda para chegue ao guardião da ponte" State="false"/>
-		<Setting Id="1406,3578" Label="Derrote o guardião da ponte" ToolTip="Splita quando o objetivo muda para derrote o guardião da ponte" State="false"/>
-		<Setting Id="3578,7808" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
-		<Setting Id="7808,1408" Label="Entregue o coração a Freya" ToolTip="Splita quando o objetivo muda para entregue o coração a Freya" State="false"/>
-		<Setting Id="1408,1410" Label="Fim da doença" ToolTip="Splita quando a doença estiver completa" State="false"/>
-		<Setting Id="1410,43039" Label="Entre no barco" ToolTip="Splita quando o objetivo muda para entre no barco" State="false"/>
-		<Setting Id="43039,756" Label="Retorne ao cofre de Tyr" ToolTip="Splita quando o objetivo muda para retorne ao cofre de Tyr" State="false"/>
-		<Setting Id="756,1414" Label="Recupere a runa negra" ToolTip="Splita quando o objetivo muda para recupere a runa negra" State="false"/>
-		<Setting Id="1414,3577" Label="Desative as defesas do cofre" ToolTip="Splita quando o objetivo muda para desative as defesas do cofre" State="false"/>
-		<Setting Id="3577,760" Label="Escape da armadilha" ToolTip="Splita quando o objetivo muda para escape da armadilha" State="false"/>
-		<Setting Id="760,1416" Label="Recupere a runa negra" ToolTip="Splita quando o objetivo muda para recupere a runa negra" State="false"/>
-		<Setting Id="1416,43063" Label="Saia do cofre de Tyr" ToolTip="Splita quando o objetivo muda para saia do cofre de Tyr" State="false"/>
-		<Setting Id="43063,43060" Label="Volte pelo torre" ToolTip="Splita quando o objetivo muda para volte pelo torre" State="false"/>
-		<Setting Id="43060,21328" Label="Volte para a montanha" ToolTip="Splita quando o objetivo muda para volte para a montanha" State="false"/>
-		<Setting Id="21328,21330" Label="Encontre um novo caminho para o cume" ToolTip="Splita quando o objetivo muda para encontre um novo caminho para o cume" State="false"/>
-		<Setting Id="21330,21332" Label="Continue em direção ao cume" ToolTip="Splita quando o objetivo muda para continue em direção ao cume" State="false"/>
-		<Setting Id="21332,21334" Label="Abra a ponte para Jotunheim" ToolTip="Splita quando o objetivo muda para abra a ponte para Jotunheim" State="false"/>
-		<Setting Id="21334,21336" Label="Capture Baldur" ToolTip="Splita quando o objetivo muda para capture Baldur" State="false"/>
-		<Setting Id="21336,748" Label="Encontre uma maneira de sair de Helheim" ToolTip="Splita quando o objetivo muda para encontre uma maneira de sair de Helheim" State="false"/>
-		<Setting Id="748,750" Label="Use o navio" ToolTip="Splita quando o objetivo muda para use o navio" State="false"/>
-		<Setting Id="750,754" Label="Escape de Helheim" ToolTip="Splita quando o objetivo muda para escape de Helheim" State="false"/>
-		<Setting Id="754,3580" Label="Viaje de volta para Midgard" ToolTip="Splita quando o objetivo muda para viaje de volta para Midgard" State="false"/>
-		<Setting Id="3580,762" Label="Mostre os planos da chave de Tyr a Brok" ToolTip="Splita quando o objetivo muda para mostre os planos da chave de Tyr a Brok" State="false"/>
-		<Setting Id="762,764" Label="Localize a porta misteriosa de Tyr" ToolTip="Splita quando o objetivo muda para localize a porta misteriosa de Tyr" State="false"/>
-		<Setting Id="764,3598" Label="Explore a câmara secreta de Tyr" ToolTip="Splita quando o objetivo muda para explore a câmara secreta de Tyr" State="false"/>
-		<Setting Id="3598,3582" Label="Quebre as correntes" ToolTip="Splita quando o objetivo muda para quebre as correntes" State="false"/>
-		<Setting Id="3582,766" Label="Volte e gire o templo" ToolTip="Splita quando o objetivo muda para volte e gire o templo" State="false"/>
-		<Setting Id="766,17679" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
-		<Setting Id="17679,18769" Label="Explore o reino entre reinos" ToolTip="Splita quando o objetivo muda para explore o reino entre reinos" State="false"/>
-		<Setting Id="18769,18771" Label="Leve a pedra da unidade ao precipício" ToolTip="Splita quando o objetivo muda para leve a pedra da unidade ao precipício" State="false"/>
-		<Setting Id="18771,21378" Label="Investigue a torre de Jotunheim" ToolTip="Splita quando o objetivo muda para investigue a torre de Jotunheim" State="false"/>
-		<Setting Id="21378,21381" Label="Sobreviva ao suplício dos reinos" ToolTip="Splita quando o objetivo muda para sobreviva ao suplício dos reinos" State="false"/>
-		<Setting Id="21381,3600" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
-		<Setting Id="3600,3568" Label="Fale com Brok e Sindri" ToolTip="Splita quando o objetivo muda para fale com Brok e Sindri" State="false"/>
-		<Setting Id="3568,3571" Label="Retorne a trompa da serpente em Midgard" ToolTip="Splita quando o objetivo muda para retornar a trompa da serpente em Midgard" State="false"/>
-		<Setting Id="3571,3588" Label="Barco na boca da serpente" ToolTip="Splita quando o objetivo muda para barco na boca da serpente" State="false"/>
-		<Setting Id="3588,3573" Label="Enconte o olho de Mimir" ToolTip="Splita quando o objetivo muda para encontre o olho de Mimir" State="false"/>
-		<Setting Id="3573,3574" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
-		<Setting Id="3574,21391" Label="Derrote Baldur" ToolTip="Splita quando o objetivo muda para derrote Baldur" State="false"/>
-		<Setting Id="21391,21393" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
-		<Setting Id="21393,19877" Label="Encontre o pico mais alto de Jotunheim" ToolTip="Splita quando o objetivo muda para encontre o pico mais alto de Jotunheim" State="false"/>
-		<Setting Id="19877,19879" Label="Espalhe suas cinzas" ToolTip="Splita quando o objetivo muda para espalhe suas cinzas" State="false"/>
-		<Setting Id="19879,19884" Label="Retorne ao templo de Tyr" ToolTip="Splita quando o objetivo muda para retorne ao templo de Tyr" State="false"/>
-		<Setting Id="19884,19891" Label="Explore os reinos" ToolTip="Splita quando o objetivo muda para explore os reinos" State="false"/>
+		<Setting Id ="Quest 1" Label="Quest 1" ToolTip="Splits for the first quest" State="false">
+			<Setting Id="0,674" Label="Caçe com Atreus" ToolTip="Splita quando o objetivo muda para caçe com Atreus" State="false"/>
+			<Setting Id="674,4620" Label="Derrote dauoi kaupmaor" ToolTip="Splita quando o objetivo muda para derrote dauoi kaupmaor" State="false"/>
+			<Setting Id="4620,678" Label="Retorne para a casa" ToolTip="Splita quando o objetivo muda para retornar para a casa" State="false"/>
+			<Setting Id="678,5347" Label="Derrote o estranho" ToolTip="Splita quando o objetivo muda para derrote o estranho" State="false"/>
+		</Setting>
+		<Setting Id ="Journey to the Mountain" Label="Journey to the Mountain" ToolTip="Splits for Journey to the Mountain quest" State="false">
+			<Setting Id="5347,8970" Label="Viaje para a montanha" ToolTip="Splita quando o objetivo muda para viaje para a montanha" State="false"/>
+			<Setting Id="8970,680" Label="Continue em direção à montanha" ToolTip="Splita quando o objetivo muda para continue em direção à montanha" State="false"/>
+			<Setting Id="680,682" Label="Fuja das ruínas" ToolTip="Splita quando o objetivo muda para fuja das ruínas" State="false"/>
+			<Setting Id="682,20115" Label="Derrote os saqueadores" ToolTip="Splita quando o objetivo muda para derrote os saqueadores" State="false"/>
+			<Setting Id="20115,20118" Label="Fuja das ruínas" ToolTip="Splita quando o objetivo muda para fuja das ruínas" State="false"/>
+			<Setting Id="20118,20120" Label="Jogue seu machado nas árvores" ToolTip="Splita quando o objetivo muda para jogue seu machado nas árvores" State="false"/>
+			<Setting Id="20120,37223" Label="Siga através do portão para a montanha" ToolTip="Splita quando o objetivo muda para siga através do portão para a montanha" State="false"/>
+			<Setting Id="37223,20401" Label="Continue em direção a montanha" ToolTip="Splita quando o objetivo muda para continue em direção a montanha" State="false"/>
+			<Setting Id="20401,686" Label="Caçe com Atreus" ToolTip="Splita quando o objetivo muda para caçe com Atreus" State="false"/>
+			<Setting Id="686,690" Label="Siga a bruxa" ToolTip="Splita quando o objetivo muda para siga a bruxa" State="false"/>
+			<Setting Id="690,692" Label="Colete a flor de pétalas brancas" ToolTip="Splita quando o objetivo muda para colete a flor de pétalas brancas" State="false"/>
+			<Setting Id="692,698" Label="Vá para o barco" ToolTip="Splita quando o objetivo muda para vá para o barco" State="false"/>
+			<Setting Id="698,700" Label="Siga em direção à luz do dia" ToolTip="Splita quando o objetivo muda para siga em direção à luz do dia" State="false"/>
+			<Setting Id="700,26608" Label="Atraque na ponte" ToolTip="Splita quando o objetivo muda para atraque na ponte" State="false"/>
+			<Setting Id="26608,17325" Label="Investigue o templo" ToolTip="Splita quando o objetivo muda para investigue o templo" State="false"/>
+			<Setting Id="17325,26864" Label="Siga em direção a torre" ToolTip="Splita quando o objetivo muda para siga em direção a torre" State="false"/>
+			<Setting Id="26864,17496" Label="Continue em direção à montanha" ToolTip="Splita quando o objetivo muda para continue em direção à montanha" State="false"/>
+		</Setting>
+		<Setting Id="Travel to Alfheim" Label="Travel to Alfheim" ToolTip="Splits for Travel to Alfheim quest" State="false">
+			<Setting Id="17496,702" Label="Siga a bruxa" ToolTip="Splita quando o objetivo muda para siga a bruxa" State="false"/>
+			<Setting Id="702,706" Label="Siga a bruxa 2" ToolTip="Splita quando o objetivo muda para siga a bruxa pela 2 vez" State="false"/>
+			<Setting Id="706,708" Label="Viaje para alfheim" ToolTip="Splita quando o objetivo muda para viaje para alfheim" State="false"/>
+		</Setting>
+		<Setting Id="Light of Alfheim" Label="Light of Alfheim" ToolTip="Splits for Light of Alfheim quest" State="false">
+			<Setting Id="708,21279" Label="Alfheim" ToolTip="Splita quando você chegar a alfheim" State="false"/>
+			<Setting Id="21279,712" Label="Cena atreus" ToolTip="Splita depois da cena do atreus no barco" State="false"/>
+			<Setting Id="712,718" Label="Encontre uma maneira de entrar no templo" ToolTip="Splita quando o objetivo muda para encontre uma maneira de entrar no templo" State="false"/>
+			<Setting Id="718,720" Label="Reative a ponte do templo anelada" ToolTip="Splita quando o objetivo muda para reative a ponte do templo anelada" State="false"/>
+			<Setting Id="720,722" Label="Volte para a Ponte do Templo Anelado" ToolTip="Splita quando o objetivo muda para volte para a Ponte do Templo Anelado" State="false"/>
+			<Setting Id="722,724" Label="Templo anelado" ToolTip="Splita quando você entrar no templo anelado" State="false"/>
+			<Setting Id="724,726" Label="Encontre uma maneira de entrar na colmeia" ToolTip="Splita quando o objetivo muda para encontre uma maneira de entrar na colmeia" State="false"/>
+			<Setting Id="726,39433" Label="Corredor estreito da colmeia" ToolTip="Splita quando você entrar no corredor estreito da colmeia" State="false"/>
+			<Setting Id="39433,728" Label="Destrua a colmeia e pegue a luz" ToolTip="Splita quando o objetivo muda para destrua a colmeia e pegue a luz" State="false"/>
+			<Setting Id="728,730" Label="Encontre uma saída do templo" ToolTip="Splita quando o objetivo muda para encontre uma saída do templo" State="false"/>
+			<Setting Id="730,732" Label="Retorne ao barco" ToolTip="Splita quando o objetivo muda para retorne ao barco" State="false"/>
+			<Setting Id="732,3701" Label="Use o elevador de areia" ToolTip="Splita quando o objetivo muda para use o elevador de areia" State="false"/>
+			<Setting Id="Alfheim%" Label="Alfheim%" ToolTip="Splits after your press the finisher button on the dark elf king" State="false"/>
+			<Setting Id="3701,734" Label="Retorne ao templo de Tyr" ToolTip="Splita quando o objetivo muda para retorne ao templo de Tyr" State="false"/>
+			<Setting Id="734,736" Label="Viaje pelo reino de volta para Midgard" ToolTip="Splita quando o objetivo muda para viaje pelo reino de volta para Midgard" State="false"/>
+			<Setting Id="736,40077" Label="Retorne à montanha" ToolTip="Splita quando o objetivo muda para retorne à montanha" State="false"/>
+			<Setting Id="40077,40026" Label="Dentro da torre de Vanaheim" ToolTip="Splita quando você entra na torre de Vanaheim" State="false"/>
+			<Setting Id="40026,3713" Label="Torre de Vanaheim" ToolTip="Splita quando objetivo atualizar na torre de Vanaheim" State="false"/>
+			<Setting Id="3713,3699" Label="Luz de Alfheim diz completa" ToolTip="Splita quando Luz de Alfheim estiver completa" State="false"/>
+		</Setting>
+		<Setting Id="Inside the Mountain" Label="Inside the Mountain" ToolTip="Splits for Inside the Mountain quest" State="false">
+			<Setting Id="3699,3702" Label="Atravesse as cavernas escuras" ToolTip="Splita quando o objetivo muda para atravesse as cavernas escuras" State="false"/>
+			<Setting Id="3702,3704" Label="Suba pela garra da caverna" ToolTip="Splita quando o objetivo muda para suba pelo garra da caverna" State="false"/>
+			<Setting Id="Dragon" Label="Dragon" Tooltip="Splits when getting the Dragon tooth from the Dragon for Sindri" State="false"/>
+			<Setting Id="3704,17494" Label="Libere a corrente" ToolTip="Splita quando o objetivo muda para libere a corrente" State="false"/>
+			<Setting Id="17494,18017" Label="Encontre uma maneira de subir" ToolTip="Splita quando o objeto muda para encontre uma maneira de subir" State="false"/>
+			<Setting Id="18017,3706" Label="Chegue ao cume" ToolTip="Splita quando o objeto muda para chegue ao cume" State="false"/>
+			<Setting Id="3706,3719" Label="Dentro da montanha completo" ToolTip="Splita quando dentro da montanha estiver completo" State="false"/>
+		</Setting>
+		<Setting Id="A new Destination" Label="A new Destination" ToolTip="Splits for A new Destination quest" State="false">
+			<Setting Id="3719,36974" Label="Retorne à caverna da bruxa" ToolTip="Splita quando o objetivo muda para retorne à caverna da bruxa" State="false"/>
+			<Setting Id="36974,36976" Label="Atraque na caverna da bruxa" ToolTip="Splita quando atracar na caverna da bruxa" State="false"/>
+			<Setting Id="36976,43073" Label="Retorne ao barco" ToolTip="Splita quando o objetivo muda para retorne ao barco" State="false"/>
+			<Setting Id="43073,37095" Label="Vá ao templo de Tyr" ToolTip="Splita quando o objetivo muda para vá ao templo de Tyr" State="false"/>
+			<Setting Id="37095,21412" Label="Um novo destino completo" ToolTip="Splita quando um novo destino estiver completo" State="false"/>
+		</Setting>
+		<Setting Id="The Magic Chisel" Label="The Magic Chisel" ToolTip="Splits for The Magic Chisel quest" State="false">
+			<Setting Id="21412,738" Label="Investigue o gigante morto" ToolTip="Splita quando o objetivo muda para investigue o gigante morto" State="false"/>
+			<Setting Id="738,740" Label="Recupere um pedaço do cinzel" ToolTip="Splita quando o objetivo muda para recupere um pedaço do cinzel" State="false"/>
+			<Setting Id="740,742" Label="Encontre uma maneira de quebrar o gelo" ToolTip="Splita quando o objetivo muda para encontre uma maneira de quebrar o gelo" State="false"/>
+			<Setting Id="742,25884" Label="Fale com Sindri" ToolTip="Splita quando o objetivo muda para fale com Sindri" State="false"/>
+			<Setting Id="25884,21529" Label="Encontre uma maneira de chegar ao martelo" ToolTip="Splita quando o objetivo muda para encontre uma maneira de chegar ao martelo" State="false"/>
+			<Setting Id="21529,21583" Label="Suba pelo martelo" ToolTip="Splita quando o objetivo muda para suba pelo martelo" State="false"/>
+			<Setting Id="21583,21585" Label="Solte a tira" ToolTip="Splita quando o objetivo muda para solte a tira" State="false"/>
+			<Setting Id="21585,21587" Label="Encontre uma maneira de chegar à cabeça do martelo" ToolTip="Splita quando o objetivo muda para encontre uma maneira de chegar à cabeça do martelo" State="false"/>
+			<Setting Id="21587,21591" Label="Vá até o cinzel" ToolTip="Splita quando o objetivo muda para vá até o cinzel" State="false"/>
+			<Setting Id="21591,744" Label="Recupere um pedaço do cinzel" ToolTip="Splita quando o objetivo muda para recupere um pedaço do cinzel" State="false"/>
+			<Setting Id="744,746" Label="Cinzel mágico completo" ToolTip="Splita quando o cinzel mágico estiver completo" State="false"/>
+		</Setting>
+		<Setting Id="Tyr's Vault" Label="Tyr's Vault" ToolTip="Splits for Tyr's Vault quest" State="false">
+			<Setting Id="746,9268" Label="Retorne ao lago dos nove" ToolTip="Splita quando o objetivo muda para retorne ao lago dos nove" State="false"/>
+			<Setting Id="9268,758" Label="Vá ao cofre de Tyr" ToolTip="Splita quando o objetivo muda para vá ao cofre de Tyr" State="false"/>
+			<Setting Id="758,40985" Label="Interagir com o vaso de areia" ToolTip="Splita quando precisar interagir com o vaso de areia" State="false"/>
+		</Setting>
+		<Setting Id="The Sickness" Label="The Sickness" ToolTip="Splits for The Sickness quest" State="false">
+			<Setting Id="40985,1398" Label="Peça ajuda para Freya" ToolTip="Splita quando o objetivo muda para peça ajuda para Freya" State="false"/>
+			<Setting Id="1398,1400" Label="USar o barco de Freya para voltar para casa" ToolTip="Splita quando o objetivo muda para usar o barco de Freya para voltar para casa" State="false"/>
+			<Setting Id="1400,7800" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
+			<Setting Id="7800,1404" Label="Viaje para Helheim" ToolTip="Splita quando o objetivo muda para viaje para Helheim" State="false"/>
+			<Setting Id="1404,1406" Label="Chegue ao guardião da ponte" ToolTip="Splita quando o objetivo muda para chegue ao guardião da ponte" State="false"/>
+			<Setting Id="1406,3578" Label="Derrote o guardião da ponte" ToolTip="Splita quando o objetivo muda para derrote o guardião da ponte" State="false"/>
+			<Setting Id="3578,7808" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
+			<Setting Id="7808,1408" Label="Entregue o coração a Freya" ToolTip="Splita quando o objetivo muda para entregue o coração a Freya" State="false"/>
+			<Setting Id="1408,1410" Label="Fim da doença" ToolTip="Splita quando a doença estiver completa" State="false"/>
+		</Setting>
+		<Setting Id="Tyr's Vault 2" Label="Tyr's Vault 2" ToolTip="Splits for Tyr's Vault 2 quest" State="false">
+			<Setting Id="1410,43039" Label="Entre no barco" ToolTip="Splita quando o objetivo muda para entre no barco" State="false"/>
+			<Setting Id="43039,756" Label="Retorne ao cofre de Tyr" ToolTip="Splita quando o objetivo muda para retorne ao cofre de Tyr" State="false"/>
+			<Setting Id="756,1414" Label="Recupere a runa negra" ToolTip="Splita quando o objetivo muda para recupere a runa negra" State="false"/>
+			<Setting Id="1414,3577" Label="Desative as defesas do cofre" ToolTip="Splita quando o objetivo muda para desative as defesas do cofre" State="false"/>
+			<Setting Id="3577,760" Label="Escape da armadilha" ToolTip="Splita quando o objetivo muda para escape da armadilha" State="false"/>
+			<Setting Id="760,1416" Label="Recupere a runa negra" ToolTip="Splita quando o objetivo muda para recupere a runa negra" State="false"/>
+			<Setting Id="1416,43063" Label="Saia do cofre de Tyr" ToolTip="Splita quando o objetivo muda para saia do cofre de Tyr" State="false"/>
+		</Setting>
+		<Setting Id="Boy being a brat" Label="Boy being a brat" ToolTip="Splits for the quest where Boy is being a brat" State="false">
+			<Setting Id="43063,43060" Label="Volte pelo torre" ToolTip="Splita quando o objetivo muda para volte pelo torre" State="false"/>
+			<Setting Id="43060,21328" Label="Volte para a montanha" ToolTip="Splita quando o objetivo muda para volte para a montanha" State="false"/>
+			<Setting Id="21328,21330" Label="Encontre um novo caminho para o cume" ToolTip="Splita quando o objetivo muda para encontre um novo caminho para o cume" State="false"/>
+			<Setting Id="21330,21332" Label="Continue em direção ao cume" ToolTip="Splita quando o objetivo muda para continue em direção ao cume" State="false"/>
+			<Setting Id="21332,21334" Label="Abra a ponte para Jotunheim" ToolTip="Splita quando o objetivo muda para abra a ponte para Jotunheim" State="false"/>
+			<Setting Id="21334,21336" Label="Capture Baldur" ToolTip="Splita quando o objetivo muda para capture Baldur" State="false"/>
+		</Setting>
+		<Setting Id="Helheim" Label="Helheim" ToolTip="Splits for Helheim quest" State="false">
+			<Setting Id="21336,748" Label="Encontre uma maneira de sair de Helheim" ToolTip="Splita quando o objetivo muda para encontre uma maneira de sair de Helheim" State="false"/>
+			<Setting Id="748,750" Label="Use o navio" ToolTip="Splita quando o objetivo muda para use o navio" State="false"/>
+			<Setting Id="750,754" Label="Escape de Helheim" ToolTip="Splita quando o objetivo muda para escape de Helheim" State="false"/>
+		</Setting>
+		<Setting Id="The Unity Stone" Label="The Unity Stone" ToolTip="Splits for The Unity Stone quest" State="false">
+			<Setting Id="754,3580" Label="Viaje de volta para Midgard" ToolTip="Splita quando o objetivo muda para viaje de volta para Midgard" State="false"/>
+			<Setting Id="3580,762" Label="Mostre os planos da chave de Tyr a Brok" ToolTip="Splita quando o objetivo muda para mostre os planos da chave de Tyr a Brok" State="false"/>
+			<Setting Id="762,764" Label="Localize a porta misteriosa de Tyr" ToolTip="Splita quando o objetivo muda para localize a porta misteriosa de Tyr" State="false"/>
+			<Setting Id="764,3598" Label="Explore a câmara secreta de Tyr" ToolTip="Splita quando o objetivo muda para explore a câmara secreta de Tyr" State="false"/>
+			<Setting Id="3598,3582" Label="Quebre as correntes" ToolTip="Splita quando o objetivo muda para quebre as correntes" State="false"/>
+			<Setting Id="3582,766" Label="Volte e gire o templo" ToolTip="Splita quando o objetivo muda para volte e gire o templo" State="false"/>
+			<Setting Id="766,17679" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
+			<Setting Id="17679,18769" Label="Explore o reino entre reinos" ToolTip="Splita quando o objetivo muda para explore o reino entre reinos" State="false"/>
+			<Setting Id="18769,18771" Label="Leve a pedra da unidade ao precipício" ToolTip="Splita quando o objetivo muda para leve a pedra da unidade ao precipício" State="false"/>
+			<Setting Id="18771,21378" Label="Investigue a torre de Jotunheim" ToolTip="Splita quando o objetivo muda para investigue a torre de Jotunheim" State="false"/>
+			<Setting Id="21378,21381" Label="Sobreviva ao suplício dos reinos" ToolTip="Splita quando o objetivo muda para sobreviva ao suplício dos reinos" State="false"/>
+		</Setting>
+		<Setting Id="Jotunheim" Label="Jotunheim" ToolTip="Splits for Jotunheim quest" State="false">
+			<Setting Id="21381,3600" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
+			<Setting Id="3600,3568" Label="Fale com Brok e Sindri" ToolTip="Splita quando o objetivo muda para fale com Brok e Sindri" State="false"/>
+			<Setting Id="3568,3571" Label="Retorne a trompa da serpente em Midgard" ToolTip="Splita quando o objetivo muda para retornar a trompa da serpente em Midgard" State="false"/>
+			<Setting Id="3571,3588" Label="Barco na boca da serpente" ToolTip="Splita quando o objetivo muda para barco na boca da serpente" State="false"/>
+			<Setting Id="3588,3573" Label="Enconte o olho de Mimir" ToolTip="Splita quando o objetivo muda para encontre o olho de Mimir" State="false"/>
+			<Setting Id="3573,3574" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
+			<Setting Id="3574,21391" Label="Derrote Baldur" ToolTip="Splita quando o objetivo muda para derrote Baldur" State="false"/>
+			<Setting Id="21391,21393" Label="Retorne à sala de viagem entre reinos" ToolTip="Splita quando o objetivo muda para retorne à sala de viagem entre reinos" State="false"/>
+			<Setting Id="21393,19877" Label="Encontre o pico mais alto de Jotunheim" ToolTip="Splita quando o objetivo muda para encontre o pico mais alto de Jotunheim" State="false"/>
+			<Setting Id="19877,19879" Label="Espalhe suas cinzas" ToolTip="Splita quando o objetivo muda para espalhe suas cinzas" State="false"/>
+			<Setting Id="19879,19884" Label="Retorne ao templo de Tyr" ToolTip="Splita quando o objetivo muda para retorne ao templo de Tyr" State="false"/>
+			<Setting Id="19884,19891" Label="Explore os reinos" ToolTip="Splita quando o objetivo muda para explore os reinos" State="false"/>
+		</Setting>
 	</Setting>
 
 	<Setting Id="100% NG+" Label="100% NG+" ToolTip="As opções abaixo seguem os splits de 100% ng+ do TpRedNinja então podem não funcionar como esperado em outras rotas" State="false">
@@ -128,6 +157,7 @@
 	</Setting>
 
 	<Setting Id="Miscellaneous" Label="Misc" ToolTip="Categorias Misc" State="false">
+		<Setting Id="Hacksilver" Label="Hacksilver" ToolTip="Shows your current Hacksilver. Good for very hard glitchless" State="false"/>
 		<Setting Id="Split for Valkyrie%" Label="Splitar para Valkyrie%" ToolTip="Splita quando você obtém um capacete de valquiria" State="false"/>
 		<Setting Id="Trials Reg%" Label="Splitar para Trials%" ToolTip="Splita toda vez que completa um desafio" State="false"/>
 		<Setting Id="Trials impossible%" Label="Splitar para Impossible Trials%" ToolTip="Splita toda vez que completa um desafio impossivel" State="false"/>
