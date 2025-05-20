@@ -53,6 +53,7 @@ startup
     vars.TrialsComplete = new List<string>{};
     vars.Hundo = new List<string>{};
     vars.Buri = 0;
+    vars.oldobj = null;
 
      // Set text component function to display pointer value as a fraction
     Action<string, string> SetTextComponent = (id, text) => {
@@ -92,13 +93,13 @@ update
         }
     }
 
-    if (settings["HackSilver"])
+    if (settings["Hacksilver"])
     {
         // Check if the Hacksilver pointer is null
         if (current.Hacksilver != null)
         {
-            // Display Hacksilver value as value/99999999, including when it's 0
-            vars.SetTextComponent("Hacksilver", current.Hacksilver);
+            // Display Hacksilver value as value, including when it's 0
+            vars.SetTextComponent("Hacksilver", current.Hacksilver + "");
         }
         else
         {
@@ -106,7 +107,11 @@ update
             vars.SetTextComponent("Pointer invalid open game. If you open the game an you still see this then contact TpRedNinja in the speedrun discord for gow");
         }
     }
-   
+
+    if (current.Obj == 0 && old.Obj != 0)
+    {
+        vars.oldobj = old.Obj;
+    }
 }
 
 onStart
@@ -244,7 +249,7 @@ split
     {
         if (old.Obj != current.Obj) // Split on Obj address changing
         {
-        string objTransition = old.Obj + "," + current.Obj;
+        string objTransition = vars.oldobj + "," + current.Obj;
         print("Obj Transition: " + objTransition);
         if (settings.ContainsKey(objTransition) && settings[objTransition])
             {
@@ -256,7 +261,7 @@ split
 
     if (settings["Dragon"])
     {
-        if (current.DragonTear > old.DragonTear && !vars.completedsplits.Contains("Dragon");)
+        if (current.DragonTear > old.DragonTear && !vars.completedsplits.Contains("Dragon"))
         {
             vars.completedsplits.Add("Dragon");
             return true;
