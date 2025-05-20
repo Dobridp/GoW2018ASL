@@ -167,7 +167,7 @@ split
     //split for ending of alfheim%
     if (settings["Alfheim%"] && current.stunned == 0 && current.DarkElfKingHealth <= 1 && current.Obj == 3701 && !vars.completedsplits.Contains("Alfheim%")) //final split for alfheim %
     {
-        vars.completedsplits.Add("Alfheim%);
+        vars.completedsplits.Add("Alfheim%");
         return true;
     }
 
