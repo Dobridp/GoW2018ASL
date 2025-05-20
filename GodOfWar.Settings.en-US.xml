@@ -6,7 +6,6 @@
 			<Setting Id="4620,678" Label="return to the house" ToolTip="Splits when the obj changes to return to the house" State="false"/>
 			<Setting Id="678,5347" Label="defeat the stranger" ToolTip="Splits when the obj changes to defeat the stranger" State="false"/>
 		</Setting>
-
 		<Setting Id ="Journey to the Mountain" Label="Journey to the Mountain" ToolTip="Splits for Journey to the Mountain quest" State="false">
 			<Setting Id="5347,8970" Label="journey to the mountain" ToolTip="Splits when the obj changes to journey to the mountain" State="false"/>
 			<Setting Id="8970,680" Label="continue towards the mountain" ToolTip="Splits when the obj changes to continue towards the mountain" State="false"/>
@@ -26,13 +25,11 @@
 			<Setting Id="17325,26864" Label="make your way to the tower" ToolTip="Splits when the obj changes to make your way to the tower" State="false"/>
 			<Setting Id="26864,17496" Label="continue towards the mountain" ToolTip="Splits when the obj changes to continue towards the mountain" State="false"/>
 		</Setting>
-
 		<Setting Id="Travel to Alfheim" Label="Travel to Alfheim" ToolTip="Splits for Travel to Alfheim quest" State="false">
 			<Setting Id="17496,702" Label="follow the witch" ToolTip="Splits when the obj changes to follow the witch" State="false"/>
 			<Setting Id="702,706" Label="follow the witch" ToolTip="Splits when the obj changes to follow the witch" State="false"/>
 			<Setting Id="706,708" Label="travel to alfheim" ToolTip="Splits when the obj changes to travel to alfheim" State="false"/>
 		</Setting>
-
 		<Setting Id="Light of Alfheim" Label="Light of Alfheim" ToolTip="Splits for Light of Alfheim quest" State="false">
 			<Setting Id="708,21279" Label="when you get to alfheim" ToolTip="Splits when you get to alfheim" State="false"/>
 			<Setting Id="21279,712" Label="after Atreus has the voices cutscene's in alfheim on boat" ToolTip="Splits when the obj changes to after Atreus has the voices cutscene's in alfheim on boat" State="false"/>
@@ -54,17 +51,15 @@
 			<Setting Id="40026,3713" Label="when your obj updates in the vanaheim tower" ToolTip="Splits when your obj updates in the vanaheim tower" State="false"/>
 			<Setting Id="3713,3699" Label="when light of alfheim quest says complete" ToolTip="Splits when the obj changes to when light of alfheim quest says complete" State="false"/>
 		</Setting>
-
 		<Setting Id="Inside the Mountain" Label="Inside the Mountain" ToolTip="Splits for Inside the Mountain quest" State="false">
 			<Setting Id="3699,3702" Label="traverse the dark caves" ToolTip="Splits when the obj changes to traverse the dark caves" State="false"/>
 			<Setting Id="3702,3704" Label="ascend the cave shaft" ToolTip="Splits when the obj changes to ascend the cave shaft" State="false"/>
 			<Setting Id="3704,17494" Label="free the chain" ToolTip="Splits when the obj changes to free the chain" State="false"/>
-			<Setting Id="Dragon" Labeel="Dragon" Tooltip="Splits when getting the Dragon tooth from the Dragon for Sindri" State="false"/>
+			<Setting Id="Dragon" Label="Dragon" Tooltip="Splits when getting the Dragon tooth from the Dragon for Sindri" State="false"/>
 			<Setting Id="17494,18017" Label="find a way to ascend" ToolTip="Splits when the obj changes to find a way to ascend" State="false"/>
 			<Setting Id="18017,3706" Label="reach the summit" ToolTip="Splits when the obj changes to reach the summit" State="false"/>
 			<Setting Id="3706,3719" Label="when inside the mountain is completed" ToolTip="Splits when the obj changes to when inside the mountain is completed" State="false"/>
 		</Setting>
-
 		<Setting Id="A new Destination" Label="A new Destination" ToolTip="Splits for A new Destination quest" State="false">
 			<Setting Id="3719,36974" Label="return to the witch's cave" ToolTip="Splits when the obj changes to return to the witch's cave" State="false"/>
 			<Setting Id="36974,36976" Label="when you dock at witch's cave" ToolTip="Splits when the obj changes to when you dock at witch's cave" State="false"/>
@@ -72,7 +67,6 @@
 			<Setting Id="43073,37095" Label="go to tyr's temple" ToolTip="Splits when the obj changes to go to tyr's temple" State="false"/>
 			<Setting Id="37095,21412" Label="when a new destination quest is completed" ToolTip="Splits when the obj changes to when a new destination quest is completed" State="false"/>
 		</Setting>
-
 		<Setting Id="The Magic Chisel" Label="The Magic Chisel" ToolTip="Splits for The Magic Chisel quest" State="false">
 			<Setting Id="21412,738" Label="investigate the dead giant" ToolTip="Splits when the obj changes to investigate the dead giant" State="false"/>
 			<Setting Id="738,740" Label="retrieve a piece of the chisel" ToolTip="Splits when the obj changes to retrieve a piece of the chisel" State="false"/>
@@ -86,13 +80,11 @@
 			<Setting Id="21591,744" Label="retrieve a piece of the chisel" ToolTip="Splits when the obj changes to retrieve a piece of the chisel" State="false"/>
 			<Setting Id="744,746" Label="when magic chisel is completed" ToolTip="Splits when the obj changes to when magic chisel is completed" State="false"/>
 		</Setting>
-
 		<Setting Id="Tyr's Vault" Label="Tyr's Vault" ToolTip="Splits for Tyr's Vault quest" State="false">
 			<Setting Id="746,9268" Label="return to the lake of nine" ToolTip="Splits when the obj changes to return to the lake of nine" State="false"/>
 			<Setting Id="9268,758" Label="go to tyr's vault" ToolTip="Splits when the obj changes to go to tyr's vault" State="false"/>
 			<Setting Id="758,40985" Label="when it wants you to interact with the sand bowl" ToolTip="Splits when the obj changes to when it wants you to interact with the sand bowl" State="false"/>
 		</Setting>
-
 		<Setting Id="The Sickness" Label="The Sickness" ToolTip="Splits for The Sickness quest" State="false">
 			<Setting Id="40985,1398" Label="ask Freya for help" ToolTip="Splits when the obj changes to ask Freya for help" State="false"/>
 			<Setting Id="1398,1400" Label="use Freya's boat to return home" ToolTip="Splits when the obj changes to use Freya's boat to return home" State="false"/>
@@ -104,7 +96,6 @@
 			<Setting Id="7808,1408" Label="Deliver the heart to Freya" ToolTip="Splits when the obj changes to Deliver the heart to Freya" State="false"/>
 			<Setting Id="1408,1410" Label="when the sickness quest is completed" ToolTip="Splits when the obj changes to when the sickness quest is completed" State="false"/>
 		</Setting>
-
 		<Setting Id="Tyr's Vault 2" Label="Tyr's Vault 2" ToolTip="Splits for Tyr's Vault 2 quest" State="false">
 			<Setting Id="1410,43039" Label="enter the boat" ToolTip="Splits when the obj changes to enter the boat" State="false"/>
 			<Setting Id="43039,756" Label="return to tyr's vault" ToolTip="Splits when the obj changes to return to tyr's vault" State="false"/>
@@ -114,7 +105,6 @@
 			<Setting Id="760,1416" Label="retrieve the black rune" ToolTip="Splits when the obj changes to retrieve the black rune" State="false"/>
 			<Setting Id="1416,43063" Label="exit tyr's vault" ToolTip="Splits when the obj changes to exit tyr's vault" State="false"/>
 		</Setting>
-
 		<Setting Id="Boy being a brat" Label="Boy being a brat" ToolTip="Splits for the quest where Boy is being a brat" State="false">
 			<Setting Id="43063,43060" Label="go back through the tower" ToolTip="Splits when the obj changes to go back through the tower" State="false"/>
 			<Setting Id="43060,21328" Label="Journey back to the mountain" ToolTip="Splits when the obj changes to Journey back to the mountain" State="false"/>
@@ -123,13 +113,11 @@
 			<Setting Id="21332,21334" Label="Open the bridge to Jotunheim" ToolTip="Splits when the obj changes to Open the bridge to Jotunheim" State="false"/>
 			<Setting Id="21334,21336" Label="Catch Baldur" ToolTip="Splits when the obj changes to Catch Baldur" State="false"/>
 		</Setting>
-
 		<Setting Id="Helheim" Label="Helheim" ToolTip="Splits for Helheim quest" State="false">
 			<Setting Id="21336,748" Label="Find a way out of Helheim" ToolTip="Splits when the obj changes to Find a way out of Helheim" State="false"/>
 			<Setting Id="748,750" Label="Use the ship" ToolTip="Splits when the obj changes to Use the ship" State="false"/>
 			<Setting Id="750,754" Label="escape Helheim" ToolTip="Splits when the obj changes to escape Helheim" State="false"/>
 		</Setting>
-
 		<Setting Id="The Unity Stone" Label="The Unity Stone" ToolTip="Splits for The Unity Stone quest" State="false">
 			<Setting Id="754,3580" Label="realm travel back to Midgard" ToolTip="Splits when the obj changes to realm travel back to Midgard" State="false"/>
 			<Setting Id="3580,762" Label="show tyr's key plans to brok" ToolTip="Splits when the obj changes to show tyr's key plans to brok" State="false"/>
@@ -143,7 +131,6 @@
 			<Setting Id="18771,21378" Label="investigate the Jotunheim tower" ToolTip="Splits when the obj changes to investigate the Jotunheim tower" State="false"/>
 			<Setting Id="21378,21381" Label="survive the gauntlet of the realms" ToolTip="Splits when the obj changes to survive the gauntlet of the realms" State="false"/>
 		</Setting>
-
 		<Setting Id="Jotunheim" Label="Jotunheim" ToolTip="Splits for Jotunheim quest" State="false">
 			<Setting Id="21381,3600" Label="return to the realm travel room" ToolTip="Splits when the obj changes to return to the realm travel room" State="false"/>
 			<Setting Id="3600,3568" Label="talk to Brok and Sindri" ToolTip="Splits when the obj changes to talk to Brok and Sindri" State="false"/>
@@ -159,16 +146,14 @@
 			<Setting Id="19884,19891" Label="explore the realms" ToolTip="Splits when the obj changes to explore the realms" State="false"/>
 		</Setting>
 	</Setting>
-
 	<Setting Id="100% NG+" Label="100% NG+" ToolTip="Enable this for the other option bellow. IMPORTANT! the stuff bellow is follows TpRedNinja's 100% splits and route so might not line up with your splits" State="false">
 		<Setting Id="Main Story" Label="Main Story" ToolTip="Splits for certain main story stuff such as 1st troll fight, completing the story portion of alfheim, and some other place" State="false"/>
 		<Setting Id="Valks" Label="Valks" ToolTip="Splits whenever you gain one of the Valkyrie's helmets" State="false"/>
 		<Setting Id="Side Stuff" Label="Side Stuff" ToolTip="Splits whenever you gain 5, 9, or 18 skap slag such as certain obj, realm tears completion, completing labors/artifact sets, and unlocking a new realm" State="false"/>
 		<Setting Id="Locations" Label="Locations" ToolTip="Splits when you leave Stone falls after first visit and second visit, isle of death, iron cove,foothills going valk area , after atreus kills modi, final climb up the peak 2nd time" State="false">
 			<Setting Id="Buri stronghold" Label="Buri stronghold" ToolTip="Splits when you leave Buri stronghold and dock at tyr's temple" State="false"/>
-    	</Setting>
+	    	</Setting>
 	</Setting>
-
 	<Setting Id="Miscellaneous" Label="Miscellaneous" ToolTip="Miscellaneous categories that aren't longer than 1hr 30mins" State="false">
 		<Setting Id="Split for Valkyrie%" Label="Split for Valkyrie%" ToolTip="Splits whenever you gain one of the Valkyrie's helmets" State="false"/>
 		<Setting Id="Trials Reg%" Label="Regular" ToolTip="Splits for Trials% after every trial ends. With auto start and auto end" State="false"/>
