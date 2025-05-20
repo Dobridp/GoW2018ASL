@@ -59,6 +59,7 @@
 			<Setting Id="3699,3702" Label="traverse the dark caves" ToolTip="Splits when the obj changes to traverse the dark caves" State="false"/>
 			<Setting Id="3702,3704" Label="ascend the cave shaft" ToolTip="Splits when the obj changes to ascend the cave shaft" State="false"/>
 			<Setting Id="3704,17494" Label="free the chain" ToolTip="Splits when the obj changes to free the chain" State="false"/>
+			<Setting Id="Dragon" Labeel="Dragon" Tooltip="Splits when getting the Dragon tooth from the Dragon for Sindri" State="false"/>
 			<Setting Id="17494,18017" Label="find a way to ascend" ToolTip="Splits when the obj changes to find a way to ascend" State="false"/>
 			<Setting Id="18017,3706" Label="reach the summit" ToolTip="Splits when the obj changes to reach the summit" State="false"/>
 			<Setting Id="3706,3719" Label="when inside the mountain is completed" ToolTip="Splits when the obj changes to when inside the mountain is completed" State="false"/>
@@ -177,5 +178,6 @@
 			<Setting Id="51" Label="Last Raven" ToolTip="Splits Only when the last Raven is killed" State="false"/>
 			<Setting Id="Odin Ravens tracker" Label="Odin Ravens tracker" ToolTip="Shows how many ravens you have destroyed" State="false"/>
 		</Setting>
+		<Setting Id="Hacksilver" Label="Hacksilver" ToolTip="Shows your current Hacksilver. Good for very hard glitchless" State="false"/>
 	</Setting>
 </Settings>
