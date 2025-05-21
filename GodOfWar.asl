@@ -14,7 +14,7 @@ state("GoW")
     int SkapSlag : 0x0142C400, 0x0, 0x40, 0x17B0; //tracks current Skap Slag
     int SmolderingEmber : 0x014262C0, 0x70, 0xE70; //tracks current smoldering ember
     int Hacksilver: 0x014261C0, 0x1F0; //tracks current hacksilver
-    int DragonTear: 0x014261C0, 0x4AB0; //tracks current dragon tears
+    int DragonTooth: 0x014261C0, 0x4AF0; //tracks wether or not you have the dragon tooth. 0 when you dont and 1 when you do
     int ORL : 0x026D4778, 0x9AC0; //Tracks the number for the labor of odin's ravens
     float DarkElfKingHealth : 0x02C34138, 0x388; //tracks the EnemyHealth useful for alfheim% primarily used for the dark elf king at the end of alfheim
 
@@ -256,7 +256,7 @@ split
 
     if (settings["Dragon"])
     {
-        if (current.DragonTear > old.DragonTear && !vars.completedsplits.Contains("Dragon"))
+        if (current.DragonTooth > old.DragonTooth && !vars.completedsplits.Contains("Dragon"))
         {
             vars.completedsplits.Add("Dragon");
             return true;
