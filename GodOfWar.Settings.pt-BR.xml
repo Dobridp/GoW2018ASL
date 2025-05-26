@@ -12,8 +12,8 @@
 			<Setting Id="680,682" Label="Luta Draugr em Ruínas" ToolTip="Splita quando o objetivo muda para fuja das ruínas" State="false"/>
 			<Setting Id="682,20115" Label="Ruínas" ToolTip="Splita quando o objetivo muda para derrote os saqueadores" State="false"/>
 			<Setting Id="20115,20118" Label="Humanos" ToolTip="Splita quando o objetivo muda para fuja das ruínas" State="false"/>
-			<Setting Id="20118,20120" Label="Atreus estando triste" ToolTip="Splita quando o objetivo muda para jogue seu machado nas árvores" State="false"/>
-			<Setting Id="20120,20401" Label="Brok" ToolTip="Splita depois da briga na loja de departamentos" State="false"/>
+			<Setting Id="20118,20120" Label="Brok" ToolTip="Splita quando o objetivo muda para jogue seu machado nas árvores" State="false"/>
+			<Setting Id="20120,20401" Label="Brok Alt" ToolTip="Splita depois da briga na loja de departamentos" State="false"/>
 			<Setting Id="20401,686" Label="Quarto com teto pontiagudo" ToolTip="Splita quando o objetivo muda para caçe com Atreus" State="false"/>
 			<Setting Id="686,690" Label="Javali Caçador" ToolTip="Splita quando o objetivo muda para siga a bruxa" State="false"/>
 			<Setting Id="690,692" Label="Javali Transportador" ToolTip="Splita quando o objetivo muda para colete a flor de pétalas brancas" State="false"/>
