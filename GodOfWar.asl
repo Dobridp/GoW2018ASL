@@ -1,7 +1,6 @@
 state("GoW")
 {
     //original address
-    string100 SaveDescript : 0x22C67E0; //Location + objective in string
     int Obj : 0x22C6904; //Objective in int; Null objective = 0
     int Load : 0x22E9DB0; //0 not loading; 257/256 loading
     int Shop : 0x2448448; //0 out of the shop; 2 in the shop
@@ -11,7 +10,6 @@ state("GoW")
     int combat : 0x22E77F0; //0 when not in combat and 1 for in combat. Used for trials
 
     // Resources, Health, and other stuff
-    int SkapSlag : 0x0142C400, 0x0, 0x40, 0x17B0; //tracks current Skap Slag
     int SmolderingEmber : 0x014262C0, 0x70, 0xE70; //tracks current smoldering ember
     int Hacksilver: 0x014261C0, 0x1F0; //tracks current hacksilver
     int DragonTooth: 0x014261C0, 0x4AF0; //tracks wether or not you have the dragon tooth. 0 when you dont and 1 when you do
@@ -263,165 +261,10 @@ split
         }
     }
 
-    //splits for 100% ng+
-    //makes sure it doesnt split when placing the valk helmets also splits when skap slag increases by 5,9, or 18
-    if (settings["Side Stuff"] && current.SkapSlag == old.SkapSlag + 9 && (current.GunnrHelmet == 0 || current.KaraHelmet == 0 || current.GeirdrifulHelmet == 0 || current.EirHelmet == 0 || current.RòtaHelmet == 0 || current.OlrunHelmet == 0 || current.GöndulHelmet == 0 || current.HildrHelmet == 0))
-    {
-        return false;
-    } else if (settings["Valks"] && !vars.completedsplits.Contains("Hildur") && current.SkapSlag == old.SkapSlag + 9 && vars.completedsplits.Contains("Göndul") && current.GöndulHelmet == 1)
-    {
-        vars.completedsplits.Add("Hildur");
-        return true;
-    } else if (settings["Side Stuff"] && (current.SkapSlag == old.SkapSlag + 5 || current.SkapSlag == old.SkapSlag + 9 || current.SkapSlag == old.SkapSlag + 18) )
-    {
-        return true;
-    }
-
-    //splits when leaving certain locations on the map
-    if (settings["Locations"] && current.SaveDescript == "Midgard - Veithurgard - Return to the Witch’s Cave" && old.SaveDescript == "Midgard - Stone Falls - Return to the Witch’s Cave" && !vars.completedsplits.Contains("Stone Falls I"))
-    {
-        vars.completedsplits.Add("Stone Falls I");
-        return true;
-    } else if (settings["Locations"] && current.SaveDescript == "Midgard - Ruins of the Ancient - Go to Týr’s Vault" && old.SaveDescript == "Midgard - Shores of Nine - Go to Týr’s Vault" && !vars.completedsplits.Contains("Light Elf Outpost"))
-    {
-        vars.completedsplits.Add("Light Elf Outpost");
-        return true;
-    } else if (settings["Locations"] && current.SaveDescript == "Midgard - Northri Stronghold - Go to Týr’s Vault" && old.SaveDescript == "Midgard - Ruins of the Ancient - Go to Týr’s Vault" && !vars.completedsplits.Contains("Ruins of the Ancient"))
-    {
-        vars.completedsplits.Add("Ruins of the Ancient");
-        return true;
-    }  else if (settings["Locations"] && current.SaveDescript == "Midgard - Iron Cove - Return to Týr’s Vault" && old.SaveDescript == "Midgard - Isle of Death - Return to Týr’s Vault" && !vars.completedsplits.Contains("Isle of Death"))
-    {
-        vars.completedsplits.Add("Isle of Death");
-        return true;
-    } else if (settings["Locations"] && current.SaveDescript == "Midgard - Shores of Nine - Return to Týr’s Vault" && old.SaveDescript == "Midgard - Iron Cove - Return to Týr’s Vault" && !vars.completedsplits.Contains("Iron Cove"))
-    {
-        vars.completedsplits.Add("Iron Cove");
-        return true;
-    } else if (settings["Locations"] && current.SaveDescript == "Midgard - Shores of Nine - Return to Týr’s Vault" && old.SaveDescript == "Midgard - Stone Falls - Return to Týr’s Vault" && !vars.completedsplits.Contains("Stone Falls 100%"))
-    {
-        vars.completedsplits.Add("Stone Falls 100%");
-        return true;
-    }else if (settings["Locations"] && current.SaveDescript == "Midgard - Hidden Chamber of Odin - Journey back to the mountain" && old.SaveDescript == "Midgard - Foothills - Journey back to the mountain" && !vars.completedsplits.Contains("Foothills III"))
-    {
-        vars.completedsplits.Add("Foothills III");
-        return true;
-    } else if (settings["Locations"] && current.SaveDescript == "Midgard - The Mountain - Journey back to the mountain" && old.SaveDescript == "Midgard - Foothills - Journey back to the mountain" && !vars.completedsplits.Contains("Foothills 100%"))
-    {
-        vars.completedsplits.Add("Foothills 100%");
-        return true;
-    } else if (settings["Locations"] && current.SaveDescript == "Midgard - Hidden Chamber of Odin - Find a new path up to the summit" && old.SaveDescript == "Midgard - The Mountain - Find a new path up to the summit" && !vars.completedsplits.Contains("Mountain II"))
-    {
-        vars.completedsplits.Add("Mountain II");
-        return true;
-    }
-
-    if (settings["Buri stronghold"] && current.SaveDescript == "Midgard - Shores of Nine - Return to Týr’s Vault" && old.SaveDescript == "Midgard - Buri’s Storeroom - Return to Týr’s Vault" && vars.Buri >= 2)
-    {
-        vars.completedsplits.Add("Buri's Storeroom");
-        return true;
-    } else if(settings["Buri stronghold"] && current.SaveDescript == "Midgard - Shores of Nine - Return to Týr’s Vault" && old.SaveDescript == "Midgard - Buri’s Storeroom - Return to Týr’s Vault" && vars.Buri < 2)
-    {
-        vars.Buri ++;
-        return false;
-    }
-
-    //Splits whenever you gain helmets
-    if (settings["Valks"] && current.GunnrHelmet == 1 && old.GunnrHelmet == -1 && !vars.completedsplits.Contains("Gunnr"))
-    {
-        vars.completedsplits.Add("Gunnr");
-        return true;
-    } else if (settings["Valks"] && current.KaraHelmet == 1 && old.KaraHelmet == -1 && !vars.completedsplits.Contains("Kara"))
-    {
-        vars.completedsplits.Add("Kara");
-        return true;
-    }  else if (settings["Valks"] && current.GeirdrifulHelmet == 1 && old.GeirdrifulHelmet == -1 && !vars.completedsplits.Contains("Geirdriful"))
-    {
-        vars.completedsplits.Add("Geirdriful");
-        return true;
-    }  else if (settings["Valks"] && current.EirHelmet == 1 && old.EirHelmet == -1 && !vars.completedsplits.Contains("Eir"))
-    {
-        vars.completedsplits.Add("Eir");
-        return true;
-    } else if (settings["Valks"] && current.RòtaHelmet == 1 && old.RòtaHelmet == -1 && !vars.completedsplits.Contains("Ròta"))
-    {
-        vars.completedsplits.Add("Ròta");
-        return true;
-    } else if (settings["Valks"] && current.OlrunHelmet == 1 && old.OlrunHelmet == -1 && !vars.completedsplits.Contains("Olrun"))
-    {
-        vars.completedsplits.Add("Olrun");
-        return true;
-    } else if (settings["Valks"] && current.GöndulHelmet == 1 && old.GöndulHelmet == -1 && !vars.completedsplits.Contains("Göndul"))
-    {
-        vars.completedsplits.Add("Göndul");
-        return true;
-    } else if (settings["Valks"] && current.SigrunHelmet == 1 && old.SigrunHelmet == -1 && !vars.completedsplits.Contains("Sigrun"))
-    {
-        vars.completedsplits.Add("Sigrun");
-        return true;
-    }
-
-    //Splits during certain story points the inserts should give you a clear idea on where that would be
-    if (settings["Main Story"] && current.Obj == 678 && old.Obj == 4620)
-    {
-        vars.completedsplits.Add("Troll Fight");
-        return true;
-    } else if (settings["Main Story"] && current.Obj == 698 && old.Obj == 692)
-    {
-        vars.completedsplits.Add("River Pass I");
-        return true;
-    } else if (settings["Main Story"] && current.Obj == 734 && old.Obj == 3701)
-    {
-        vars.completedsplits.Add("Alfheim Story");
-        return true;
-    } else if (settings["Main Story"] && current.Obj == 40077 && old.Obj == 736)
-    {
-        vars.completedsplits.Add("Alfheim I");
-        return true;
-    } else if (settings["Main Story"] && current.Obj == 756 && old.Obj == 43039)
-    {
-        vars.completedsplits.Add("Boy is a god!");
-        return true;
-    } else if (settings["Main Story"] && current.Obj == 1416 && old.Obj == 760)
-    {
-        vars.completedsplits.Add("Tyr's Vault Puzzles");
-        return true;
-    } else if (settings["Main Story"] && current.Obj == 43063 && old.Obj == 1416)
-    {
-        vars.completedsplits.Add("Grendel Twins Fight");
-        return true;
-    }else if (settings["Main Story"] && current.Obj == 21391 && old.Obj == 3574)
-    {
-        vars.completedsplits.Add("Into the Giant Snake");
-        return true;
-    }  else if (settings["Main Story"] && current.Obj == 21393 && old.Obj == 21391)
-    {
-        vars.completedsplits.Add("Baldur II");
-        return true;
-    } else if (settings["Main Story"] && current.Obj == 19884 && old.Obj == 19879)
-    {
-        vars.completedsplits.Add("JOTANHEIM!");
-        return true;
-    } else if (settings["Main Story"] && current.Obj == 19891 && old.Obj == 19884)
-    {
-        vars.completedsplits.Add("Finish");
-        return true;
-    }
-
 }
 
 onSplit
 {
-    //in case someone does a undo split an in general its better to be here
-    if (settings["Side Stuff"])
-    {
-        if (current.SkapSlag == old.SkapSlag + 5 || current.SkapSlag == old.SkapSlag + 9 || current.SkapSlag == old.SkapSlag + 18)
-        {
-            vars.completedsplits.Add(vars.Hundo[0]);  
-            vars.Hundo.RemoveAt(0);
-        }
-       
-    }
 
     //add the stuff here b/c gotta make use out of the block 
     if (settings["Trials Reg%"])
