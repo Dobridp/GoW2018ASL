@@ -231,8 +231,8 @@ split
            vars.ValksDead.Add("Göndul");
             return true;
         }
-        if (current.HildrHelmet == 1 && old.HildrHelmet == -1 && !vars.ValksDead.Contains("Hildr")){
-            vars.ValksDead.Add("Hildr");
+        if (current.HildurHelmet == 1 && old.HildurHelmet == -1 && !vars.ValksDead.Contains("Hildur")){
+            vars.ValksDead.Add("Hildur");
             return true;
         }
     }
