@@ -167,19 +167,21 @@ split
      //splits for trials% ng and ng+
     if (settings["Trials Reg%"])
     {
-        if (current.SmolderingEmber > old.SmolderingEmber)
+        if (current.SmolderingEmber > old.SmolderingEmber && vars.TrialsComplete.Count > 0)
         {
             return true;
-        } else if (current.combat == 0 && old.combat == 1 && vars.completedsplits.Contains("Trial V Hard"));
+        } else if (current.combat == 0 && old.combat == 1 && vars.completedsplits.Contains("Trial V Hard")
+            && !vars.completedsplits.Contains("Göndul") && vars.TrialsComplete.Count > 0)
         {
             return true;
         }
     } else if (settings["Trials impossible%"])
     {
-        if (current.SmolderingEmber > old.SmolderingEmber)
+        if (current.SmolderingEmber > old.SmolderingEmber && vars.TrialsComplete.Count > 0)
         {
             return true;
-        } else if (current.sword == 31 && old.sword == 0 && vars.completedsplits.Contains("Trial V Impossible"))
+        } else if (current.sword == 31 && old.sword == 0 && vars.completedsplits.Contains("Trial V Impossible")
+            && !vars.completedsplits.Contains("Sword") && vars.TrialsComplete.Count > 0)
         {
             return true;
         }
@@ -266,29 +268,12 @@ split
 onSplit
 {
 
-    //add the stuff here b/c gotta make use out of the block 
-    if (settings["Trials Reg%"])
+    //the split block already decided which trial fired, so just pop the next name off the queue
+    if (settings["Trials Reg%"] || settings["Trials impossible%"])
     {
-        if (current.SmolderingEmber > old.SmolderingEmber)
+        if (vars.TrialsComplete.Count > 0)
         {
-            vars.completedsplits.Add(vars.TrialsComplete[0]);  
-            vars.TrialsComplete.RemoveAt(0);
-        }
-        if (current.combat == 0 && old.combat == 1 && vars.completedsplits.Contains("Trial V Hard"))
-        {
-            vars.completedsplits.Add(vars.TrialsComplete[0]);  
-            vars.TrialsComplete.RemoveAt(0);
-        }
-    } else if (settings["Trials impossible%"])
-    {
-        if (current.SmolderingEmber > old.SmolderingEmber)
-        {
-            vars.completedsplits.Add(vars.TrialsComplete[0]);  
-            vars.TrialsComplete.RemoveAt(0);
-        }
-        if (current.combat == 0 && old.combat == 1 && vars.completedsplits.Contains("Trial V Impossible"))
-        {
-            vars.completedsplits.Add(vars.TrialsComplete[0]);  
+            vars.completedsplits.Add(vars.TrialsComplete[0]);
             vars.TrialsComplete.RemoveAt(0);
         }
     }
